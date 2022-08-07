@@ -2,6 +2,9 @@
 
 DOTFILES_DIR=$(cd `dirname $0` && pwd)
 
+# https://brew.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # tmux
 brew install --quiet tmux
 ln -f -s $DOTFILES_DIR/tmux.conf ~/.tmux.conf
