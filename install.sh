@@ -2,36 +2,41 @@
 
 DOTFILES_DIR=$(cd `dirname $0` && pwd)
 
+function brew_install {
+  brew install --quiet $1
+}
+
 # https://brew.sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL \
+  https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /dev/null
 
 # http://tmux.github.io
-brew install --quiet tmux
+brew_install tmux
 ln -f -s $DOTFILES_DIR/tmux.conf ~/.tmux.conf
-brew install --quiet reattach-to-user-namespace
+brew_install reattach-to-user-namespace
 
 # https://zsh.org
-brew install --quiet zsh
-brew install --quiet zsh-autosuggestions
+brew_install zsh
+brew_install zsh-autosuggestions
 
 # https://starship.rs
-brew install --quiet starship
+brew_install starship
 mkdir -p ~/.config && ln -f -s $DOTFILES_DIR/starship.toml ~/.config/starship.toml
 
 # font from https://www.nerdfonts.com
 brew tap homebrew/cask-fonts
-brew install --cask --quiet font-fira-code-nerd-font
+brew_install font-fira-code-nerd-font
 
 # https://neovim.io
-brew install --quiet neovim
+brew_install neovim
 sh -c 'curl -sfLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 mkdir -p ~/.config && ln -f -s $DOTFILES_DIR/nvim ~/.config/
 
 # https://bazel.build
-brew install --quiet bazelisk
+brew_install bazelisk
 brew tap bazelbuild/tap
-brew install --quiet bazelbuild/tap/ibazel
+brew_install bazelbuild/tap/ibazel
 
 # https://github.com/sharkdp/bat
-brew install --quiet bat
+brew_install bat
