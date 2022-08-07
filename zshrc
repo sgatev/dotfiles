@@ -4,8 +4,9 @@ then
   tmux attach -t TMUX || tmux new -s TMUX
 fi
 
-# set up zsh plugins
+# set up zsh autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
 
 # initialize https://starship.rs
 eval "$(starship init zsh)"
