@@ -29,9 +29,9 @@ sh -c 'curl -sfLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug
 mkdir -p ~/.config && ln -f -s $DOTFILES_DIR/nvim ~/.config/
 
 # https://bazel.build
-brew install bazelisk
+brew install --quiet bazelisk
 brew tap bazelbuild/tap
-brew install bazelbuild/tap/ibazel
+brew install --quiet bazelbuild/tap/ibazel
 
 # https://github.com/sharkdp/bat
 brew install --quiet bat
