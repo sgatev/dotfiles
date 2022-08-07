@@ -32,3 +32,6 @@ mkdir -p ~/.config && ln -f -s $DOTFILES_DIR/nvim ~/.config/
 brew install bazelisk
 brew tap bazelbuild/tap
 brew install bazelbuild/tap/ibazel
+
+# https://github.com/sharkdp/bat
+brew install --quiet bat

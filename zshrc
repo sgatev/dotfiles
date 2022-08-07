@@ -15,5 +15,6 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
 # set up aliases
+alias b=bat
 alias e=nvim
 alias l="ls -alG"
