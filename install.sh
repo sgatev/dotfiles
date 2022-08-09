@@ -43,3 +43,6 @@ brew_install bat
 
 # http://golang.org
 brew_install go
+
+# http://rust-lang.org
+brew_install rust
