@@ -18,6 +18,7 @@ brew_install reattach-to-user-namespace
 # https://zsh.org
 brew_install zsh
 brew_install zsh-autosuggestions
+brew_install zsh-syntax-highlighting
 
 # https://starship.rs
 brew_install starship
