@@ -40,3 +40,6 @@ brew_install bazelbuild/tap/ibazel
 
 # https://github.com/sharkdp/bat
 brew_install bat
+
+# http://golang.org
+brew_install go
