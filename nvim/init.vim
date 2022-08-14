@@ -1,7 +1,7 @@
 call plug#begin()
 
-" https://github.com/fxn/vim-monochrome
-Plug 'fxn/vim-monochrome'
+" https://www.nordtheme.com
+Plug 'arcticicestudio/nord-vim'
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
@@ -18,11 +18,11 @@ Plug 'junegunn/fzf.vim'
 " initialize plugin system
 call plug#end()
 
-colorscheme monochrome
+colorscheme nord
 
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'nord',
       \ }
 
 filetype plugin indent on

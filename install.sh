@@ -14,6 +14,7 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL \
 brew_install tmux
 ln -f -s $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 brew_install reattach-to-user-namespace
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # https://zsh.org
 brew_install zsh

@@ -24,10 +24,10 @@ setopt SHARE_HISTORY          # share history between sessions
 autoload -Uz compinit && compinit
 
 # set up fzf
-export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
+export FZF_DEFAULT_OPTS="--preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}'"
 
 # set up aliases
-alias b=bat
+alias b="bat --theme=Nord"
 alias e=nvim
 alias f="fzf --reverse --cycle"
 alias l="ls -alG"
