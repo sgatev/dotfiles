@@ -47,3 +47,7 @@ brew_install go
 
 # http://rust-lang.org
 brew_install rust
+
+# https://github.com/junegunn/fzf
+brew_install fzf
+$(brew --prefix)/opt/fzf/install --all --no-bash --no-fish
