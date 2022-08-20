@@ -21,6 +21,9 @@ brew_install zsh
 brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
 
+# https://github.com/Aloxaf/fzf-tab
+git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
+
 # https://starship.rs
 brew_install starship
 mkdir -p ~/.config && ln -f -s $DOTFILES_DIR/starship.toml ~/.config/starship.toml
