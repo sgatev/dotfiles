@@ -59,3 +59,12 @@ brew_install rust
 # https://github.com/junegunn/fzf
 brew_install fzf
 $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish > /dev/null
+
+# set up git aliases
+git config --global alias.cam '!git add --all && git commit -m'
+git config --global alias.d 'diff'
+git config --global alias.d 'diff'
+git config --global alias.dc 'diff --cached'
+git config --global alias.l 'log --oneline'
+git config --global alias.p 'push'
+git config --global alias.s 'status -sb'

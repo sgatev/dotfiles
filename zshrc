@@ -34,4 +34,5 @@ export FZF_DEFAULT_OPTS="--preview 'bat --theme=Nord --style=numbers --color=alw
 alias b="bat --theme=Nord"
 alias e=nvim
 alias f="fzf --reverse --cycle"
+alias g="git"
 alias l="ls -alG"
