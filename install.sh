@@ -6,6 +6,10 @@ function brew_install {
   brew install --quiet $1
 }
 
+function git_install {
+  git -C $2 pull --quiet || git clone --quiet $1 $2
+}
+
 # https://brew.sh
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL \
   https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /dev/null
@@ -14,7 +18,7 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL \
 brew_install tmux
 ln -f -s $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 brew_install reattach-to-user-namespace
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git_install https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # https://zsh.org
 brew_install zsh
@@ -22,7 +26,7 @@ brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
 
 # https://github.com/Aloxaf/fzf-tab
-git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
+git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 
 # https://starship.rs
 brew_install starship
@@ -54,4 +58,4 @@ brew_install rust
 
 # https://github.com/junegunn/fzf
 brew_install fzf
-$(brew --prefix)/opt/fzf/install --all --no-bash --no-fish
+$(brew --prefix)/opt/fzf/install --all --no-bash --no-fish > /dev/null
