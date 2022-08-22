@@ -6,10 +6,7 @@ fi
 
 source ~/.dotfiles/zsh/aliases.zsh
 source ~/.dotfiles/zsh/completions.zsh
-
-# https://github.com/Aloxaf/fzf-tab
-source ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
-zstyle ':fzf-tab:complete:*:*' fzf-flags --preview=''
+source ~/.dotfiles/zsh/fzf.zsh
 
 # set up autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -26,8 +23,3 @@ setopt EXTENDED_HISTORY       # save command’s beginning timestamp and duratio
 setopt HIST_FIND_NO_DUPS      # do not display duplicates
 setopt HIST_IGNORE_ALL_DUPS   # remove older duplicate from history
 setopt SHARE_HISTORY          # share history between sessions
-
-# set up fzf
-export FZF_DEFAULT_OPTS="--preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}'"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
