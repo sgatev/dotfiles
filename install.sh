@@ -1,7 +1,5 @@
 #!/bin/sh
 
-DOTFILES_DIR=$(cd `dirname $0` && pwd)
-
 function brew_install {
   brew install --quiet $1
 }
@@ -10,12 +8,15 @@ function git_install {
   git -C $2 pull --quiet || git clone --quiet $1 $2
 }
 
+DOTFILES="$(cd `dirname $0` && pwd)"
+ln -f -h -s $DOTFILES ~/.dotfiles
+
 # https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # http://tmux.github.io
 brew_install tmux
-ln -f -s $DOTFILES_DIR/tmux.conf ~/.tmux.conf
+ln -f -s $DOTFILES/tmux.conf ~/.tmux.conf
 brew_install reattach-to-user-namespace
 git_install https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -23,15 +24,14 @@ git_install https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew_install zsh
 brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
-ln -f -s $DOTFILES_DIR/zshrc ~/.zshrc
-ln -f -s $DOTFILES_DIR/zsh ~/zsh
+ln -f -s $DOTFILES/zshrc ~/.zshrc
 
 # https://github.com/Aloxaf/fzf-tab
 git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 
 # https://starship.rs
 brew_install starship
-mkdir -p ~/.config && ln -f -s $DOTFILES_DIR/starship.toml ~/.config/starship.toml
+mkdir -p ~/.config && ln -f -s $DOTFILES/starship.toml ~/.config/starship.toml
 
 # font from https://www.nerdfonts.com
 brew tap homebrew/cask-fonts
@@ -41,7 +41,7 @@ brew_install font-fira-code-nerd-font
 brew_install neovim
 sh -c 'curl -sfLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-mkdir -p ~/.config && ln -f -s $DOTFILES_DIR/nvim ~/.config/
+mkdir -p ~/.config && ln -f -s $DOTFILES/nvim ~/.config/
 
 # https://bazel.build
 brew_install bazelisk
