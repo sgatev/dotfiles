@@ -63,6 +63,7 @@ brew_install fzf
 $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish > /dev/null
 
 # set up git aliases
+git config --global alias.a 'add'
 git config --global alias.cam '!git add --all && git commit -m'
 git config --global alias.d 'diff'
 git config --global alias.d 'diff'
