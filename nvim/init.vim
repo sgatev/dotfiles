@@ -40,3 +40,5 @@ set shiftwidth=2
 set clipboard=unnamed
 
 set number
+
+set cursorline
