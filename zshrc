@@ -31,10 +31,6 @@ setopt SHARE_HISTORY          # share history between sessions
 export FZF_DEFAULT_OPTS="--preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}'"
 
 # set up aliases
-alias b="bat --theme=Nord"
-alias e=nvim
-alias f="fzf --reverse --cycle"
-alias g="git"
-alias l="ls -alG"
+source ~/zsh/aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
