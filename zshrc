@@ -4,8 +4,8 @@ then
   tmux attach -t TMUX || tmux new -s TMUX
 fi
 
-# enable completion
-autoload -Uz compinit && compinit
+source ~/zsh/aliases.sh
+source ~/zsh/completions.zsh
 
 # https://github.com/Aloxaf/fzf-tab
 source ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
@@ -29,8 +29,5 @@ setopt SHARE_HISTORY          # share history between sessions
 
 # set up fzf
 export FZF_DEFAULT_OPTS="--preview 'bat --theme=Nord --style=numbers --color=always --line-range :500 {}'"
-
-# set up aliases
-source ~/zsh/aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
