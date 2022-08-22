@@ -11,8 +11,7 @@ function git_install {
 }
 
 # https://brew.sh
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL \
-  https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /dev/null
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # http://tmux.github.io
 brew_install tmux
