@@ -36,3 +36,5 @@ alias e=nvim
 alias f="fzf --reverse --cycle"
 alias g="git"
 alias l="ls -alG"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

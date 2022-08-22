@@ -24,6 +24,7 @@ git_install https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew_install zsh
 brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
+ln -f -s $DOTFILES_DIR/zshrc ~/.zshrc
 
 # https://github.com/Aloxaf/fzf-tab
 git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
