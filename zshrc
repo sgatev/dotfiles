@@ -4,7 +4,7 @@ then
   tmux attach -t TMUX || tmux new -s TMUX
 fi
 
-source ~/zsh/aliases.sh
+source ~/zsh/aliases.zsh
 source ~/zsh/completions.zsh
 
 # https://github.com/Aloxaf/fzf-tab
