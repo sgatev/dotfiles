@@ -7,6 +7,7 @@ fi
 source ~/.dotfiles/zsh/aliases.zsh
 source ~/.dotfiles/zsh/completions.zsh
 source ~/.dotfiles/zsh/fzf.zsh
+source ~/.dotfiles/zsh/options.zsh
 
 # set up autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -17,11 +18,5 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # initialize https://starship.rs
 eval "$(starship init zsh)"
-
-setopt APPEND_HISTORY         # append history list to the history file
-setopt EXTENDED_HISTORY       # save command’s beginning timestamp and duration
-setopt HIST_FIND_NO_DUPS      # do not display duplicates
-setopt HIST_IGNORE_ALL_DUPS   # remove older duplicate from history
-setopt SHARE_HISTORY          # share history between sessions
 
 export EDITOR="nvim"
