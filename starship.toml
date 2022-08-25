@@ -1,9 +1,0 @@
-format = "$cmd_duration$directory$character"
-add_newline = false
-
-[directory]
-style = "blue"
-
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"

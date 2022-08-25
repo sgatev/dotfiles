@@ -13,7 +13,5 @@ source ~/.dotfiles/zsh/options.zsh
 # set up syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# initialize https://starship.rs
-eval "$(starship init zsh)"
-
 export EDITOR="nvim"
+export PROMPT='%F{blue}%~ %(?.%F{green}❯.%F{red}❯)%f '

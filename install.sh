@@ -29,10 +29,6 @@ ln -f -s $DOTFILES/zshrc ~/.zshrc
 # https://github.com/Aloxaf/fzf-tab
 git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 
-# https://starship.rs
-brew_install starship
-mkdir -p ~/.config && ln -f -s $DOTFILES/starship.toml ~/.config/starship.toml
-
 # font from https://www.nerdfonts.com
 brew tap homebrew/cask-fonts
 brew_install font-fira-code-nerd-font
