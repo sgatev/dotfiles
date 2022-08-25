@@ -56,10 +56,14 @@ brew_install go
 
 # http://rust-lang.org
 brew_install rust
+brew_install rust-analyzer
 
 # https://github.com/junegunn/fzf
 brew_install fzf
 $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish > /dev/null
+
+# https://github.com/Wilfred/difftastic
+brew_install difftastic
 
 # set up git aliases
 git config --global alias.a 'add'
