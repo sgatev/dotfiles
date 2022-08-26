@@ -3,7 +3,7 @@ FZF_DEFAULT_PREVIEW="bat --theme=Nord --style=numbers --color=always --line-rang
 export FZF_DEFAULT_OPTS="--color='$FZF_DEFAULT_COLOR' --preview '$FZF_DEFAULT_PREVIEW'"
 
 # https://github.com/Aloxaf/fzf-tab
-source ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+. ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ':fzf-tab:complete:*:*' fzf-flags --preview=''
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && . ~/.fzf.zsh
