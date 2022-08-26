@@ -1,0 +1,14 @@
+[alias]
+  cam = !git add --all && git commit -m
+  d = diff
+  dc = diff --cached
+  l = log --oneline
+  p = push
+  s = status -sb
+  a = add
+  ds = !GIT_EXTERNAL_DIFF=difft git diff
+  dcs = !GIT_EXTERNAL_DIFF=difft git diff --cached
+[include]
+  path = ~/.gitconfig.local
+[user]
+  name = Stanislav Gatev

@@ -61,13 +61,5 @@ $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish > /dev/null
 # https://github.com/Wilfred/difftastic
 brew_install difftastic
 
-# set up git aliases
-git config --global alias.a 'add'
-git config --global alias.cam '!git add --all && git commit -m'
-git config --global alias.d 'diff'
-git config --global alias.ds '!GIT_EXTERNAL_DIFF=difft git diff'
-git config --global alias.dc 'diff --cached'
-git config --global alias.dcs '!GIT_EXTERNAL_DIFF=difft git diff --cached'
-git config --global alias.l 'log --oneline'
-git config --global alias.p 'push'
-git config --global alias.s 'status -sb'
+# set up git
+ln -f -s $DOTFILES/gitconfig ~/.gitconfig
