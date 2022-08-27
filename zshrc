@@ -1,7 +1,7 @@
 # ensure that a tmux session is attached
 if [ -z "$TMUX" ]
 then
-  tmux attach -t TMUX || tmux new -s TMUX
+  tmux attach -t tmux || tmux new -s tmux
 fi
 
 . ~/.dotfiles/zsh/aliases.zsh
