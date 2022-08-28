@@ -32,3 +32,31 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+lua << EOF
+local actions = require("telescope.actions")
+require("telescope").setup{
+  defaults = {
+    mappings = {
+      i = {
+        -- Do not to enter a normal-like mode when hitting escape.
+        ["<esc>"] = actions.close
+      },
+    },
+  },
+  pickers = {
+    find_files = {
+      -- Remove ./ from fd results.
+      find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
+    },
+  },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true
+    }
+  }
+}
+require('telescope').load_extension('fzf')
+EOF
