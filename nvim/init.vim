@@ -1,5 +1,7 @@
 source ~/.dotfiles/nvim/plugins.vim
 
+let mapleader = ","
+
 colorscheme nord
 
 set noshowmode
