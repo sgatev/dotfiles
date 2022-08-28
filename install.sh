@@ -65,3 +65,9 @@ ln -f -s $DOTFILES/gitconfig ~/.gitconfig
 
 # https://github.com/fabianishere/pam_reattach
 brew_install pam-reattach
+
+# https://github.com/BurntSushi/ripgrep
+brew_install ripgrep
+
+# https://github.com/sharkdp/fd
+brew_install fd
