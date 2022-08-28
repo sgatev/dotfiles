@@ -21,6 +21,8 @@ set shiftwidth=2
 
 set clipboard=unnamed
 
+set termguicolors
+
 set number
 
 set cursorline
