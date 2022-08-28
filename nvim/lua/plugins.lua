@@ -1,4 +1,4 @@
-vim.call("plug#begin")
+vim.call('plug#begin')
 
 local Plug = vim.fn['plug#']
 
@@ -36,4 +36,4 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
-vim.call("plug#end")
+vim.call('plug#end')

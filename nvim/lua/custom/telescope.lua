@@ -1,18 +1,18 @@
-local actions = require("telescope.actions")
+local actions = require('telescope.actions')
 
-require("telescope").setup{
+require('telescope').setup{
   defaults = {
     mappings = {
       i = {
         -- Do not to enter a normal-like mode when hitting escape.
-        ["<esc>"] = actions.close
+        ['<esc>'] = actions.close
       },
     },
   },
   pickers = {
     find_files = {
       -- Remove ./ from fd results.
-      find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
+      find_command = { 'fd', '--type', 'f', '--strip-cwd-prefix' }
     },
   },
   extensions = {
