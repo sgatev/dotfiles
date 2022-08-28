@@ -1,41 +1,46 @@
-source ~/.dotfiles/nvim/plugins.vim
+require("plugins")
 
-let mapleader = ","
+vim.g.mapleader = ","
+vim.g.lightline = {
+  colorscheme = "nord"
+}
 
-colorscheme nord
+vim.api.nvim_command([[colorscheme nord]])
 
-set noshowmode
-let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ }
+vim.o.termguicolors = true -- emit true (24-bit) colors
+vim.o.showmode = false     -- do not show the current mode
+vim.o.number = true        -- show line numbers on the left
+vim.o.cursorline = true    -- highlight the current line
+vim.o.tabstop = 2          -- 1 tab = 2 spaces
+vim.o.softtabstop = 2      -- show existing tabs as 2 spaces
+vim.o.shiftwidth = 2       -- indent with 2 spaces
+vim.o.expandtab = true     -- expand tab to spaces
 
-filetype plugin indent on
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ff",
+  "<cmd>Telescope find_files<cr>",
+  { noremap = true }
+ )
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fg",
+  "<cmd>Telescope live_grep<cr>",
+  { noremap = true }
+ )
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fb",
+  "<cmd>Telescope buffers<cr>",
+  { noremap = true }
+ )
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fh",
+  "<cmd>Telescope help_tags<cr>",
+  { noremap = true }
+ )
 
-" on pressing tab, insert 2 spaces
-set expandtab
-
-" show existing tab with 2 spaces width
-set tabstop=2
-set softtabstop=2
-
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2
-
-set clipboard=unnamed
-
-set termguicolors
-
-set number
-
-set cursorline
-
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-lua << EOF
 local actions = require("telescope.actions")
 require("telescope").setup{
   defaults = {
@@ -61,11 +66,9 @@ require("telescope").setup{
   }
 }
 require('telescope').load_extension('fzf')
-EOF
 
-set completeopt=menu,menuone,noselect
+--
 
-lua <<EOF
 -- Setup nvim-cmp.
 local cmp = require'cmp'
 
@@ -127,4 +130,3 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 require'lspconfig'.rust_analyzer.setup {
   capabilities = capabilities
 }
-EOF
