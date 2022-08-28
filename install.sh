@@ -17,7 +17,6 @@ ln -f -h -s $DOTFILES ~/.dotfiles
 # http://tmux.github.io
 brew_install tmux
 ln -f -s $DOTFILES/tmux.conf ~/.tmux.conf
-brew_install reattach-to-user-namespace
 git_install https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # https://zsh.org
@@ -63,3 +62,6 @@ brew_install difftastic
 
 # set up git
 ln -f -s $DOTFILES/gitconfig ~/.gitconfig
+
+# https://github.com/fabianishere/pam_reattach
+brew_install pam-reattach
