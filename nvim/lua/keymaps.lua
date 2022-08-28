@@ -1,27 +1,13 @@
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>ff',
-  '<cmd>Telescope find_files<cr>',
-  { noremap = true }
- )
+vim.g.mapleader = ','
 
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>fg',
-  '<cmd>Telescope live_grep<cr>',
-  { noremap = true }
- )
+local function map(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts['noremap'] = true
+  vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+end
 
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>fb',
-  '<cmd>Telescope buffers<cr>',
-  { noremap = true }
- )
-
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>fh',
-  '<cmd>Telescope help_tags<cr>',
-  { noremap = true }
- )
+-- https://github.com/nvim-telescope/telescope.nvim
+map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
