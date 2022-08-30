@@ -35,4 +35,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 -- https://github.com/easymotion/vim-easymotion
 Plug 'easymotion/vim-easymotion'
 
+-- https://github.com/mg979/vim-visual-multi
+Plug 'mg979/vim-visual-multi'
+
 vim.call('plug#end')
