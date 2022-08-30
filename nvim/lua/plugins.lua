@@ -13,10 +13,6 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
--- https://github.com/junegunn/fzf.vim
-Plug('junegunn/fzf', { ['do'] = vim.fn['fzf#install'] })
-Plug 'junegunn/fzf.vim'
-
 -- https://github.com/nvim-treesitter/nvim-treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 
