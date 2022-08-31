@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 function brew_install {
   brew install --quiet $1
