@@ -71,3 +71,6 @@ brew_install ripgrep
 
 # https://github.com/sharkdp/fd
 brew_install fd
+
+# https://clang.llvm.org/docs/ClangFormat.html
+brew_install clang-format
