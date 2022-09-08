@@ -58,3 +58,4 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 require'lspconfig'.rust_analyzer.setup {
   capabilities = capabilities
 }
+require'lspconfig'.clangd.setup{}
