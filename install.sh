@@ -50,8 +50,8 @@ brew_install bat
 brew_install go
 
 # http://rust-lang.org
-brew_install rust
-brew_install rustfmt
+brew_install rustup
+rustup-init -y -q
 brew_install rust-analyzer
 
 # https://github.com/junegunn/fzf
