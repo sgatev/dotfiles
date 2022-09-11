@@ -38,4 +38,7 @@ Plug 'easymotion/vim-easymotion'
 -- https://github.com/mg979/vim-visual-multi
 Plug 'mg979/vim-visual-multi'
 
+-- https://github.com/RRethy/vim-illuminate
+Plug 'RRethy/vim-illuminate'
+
 vim.call('plug#end')

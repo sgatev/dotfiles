@@ -13,3 +13,4 @@ vim.o.softtabstop = 2       -- show existing tabs as 2 spaces
 vim.o.shiftwidth = 2        -- indent with 2 spaces
 vim.o.expandtab = true      -- expand tab to spaces
 vim.o.clipboard = 'unnamed' -- copy/paste to system clipboard
+vim.o.hlsearch = false      -- do not highlight search matches
