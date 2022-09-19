@@ -41,4 +41,7 @@ Plug 'mg979/vim-visual-multi'
 -- https://github.com/RRethy/vim-illuminate
 Plug 'RRethy/vim-illuminate'
 
+-- https://github.com/folke/which-key.nvim
+Plug 'folke/which-key.nvim'
+
 vim.call('plug#end')
