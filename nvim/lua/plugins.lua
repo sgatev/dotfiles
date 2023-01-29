@@ -34,6 +34,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 
 -- https://github.com/easymotion/vim-easymotion
 Plug 'easymotion/vim-easymotion'
+Plug 'ggandor/leap.nvim'
 
 -- https://github.com/mg979/vim-visual-multi
 Plug 'mg979/vim-visual-multi'
