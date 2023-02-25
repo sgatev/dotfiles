@@ -45,4 +45,7 @@ Plug 'RRethy/vim-illuminate'
 -- https://github.com/folke/which-key.nvim
 Plug 'folke/which-key.nvim'
 
+-- https://github.com/ziglang/zig.vim
+Plug 'ziglang/zig.vim'
+
 vim.call('plug#end')
