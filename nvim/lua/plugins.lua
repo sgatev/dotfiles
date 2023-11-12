@@ -48,4 +48,7 @@ Plug 'folke/which-key.nvim'
 -- https://github.com/ziglang/zig.vim
 Plug 'ziglang/zig.vim'
 
+-- https://github.com/stevearc/oil.nvim
+Plug 'stevearc/oil.nvim'
+
 vim.call('plug#end')
