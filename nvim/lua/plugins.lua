@@ -51,4 +51,7 @@ Plug 'ziglang/zig.vim'
 -- https://github.com/stevearc/oil.nvim
 Plug 'stevearc/oil.nvim'
 
+-- https://github.com/alexghergh/nvim-tmux-navigation
+Plug 'alexghergh/nvim-tmux-navigation'
+
 vim.call('plug#end')
