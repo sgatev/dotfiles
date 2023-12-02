@@ -54,4 +54,7 @@ Plug 'stevearc/oil.nvim'
 -- https://github.com/alexghergh/nvim-tmux-navigation
 Plug 'alexghergh/nvim-tmux-navigation'
 
+-- https://github.com/lewis6991/gitsigns.nvim
+Plug 'lewis6991/gitsigns.nvim'
+
 vim.call('plug#end')
