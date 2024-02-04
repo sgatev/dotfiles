@@ -57,4 +57,7 @@ Plug 'alexghergh/nvim-tmux-navigation'
 -- https://github.com/lewis6991/gitsigns.nvim
 Plug 'lewis6991/gitsigns.nvim'
 
+-- https://github.com/bazelbuild/vim-bazel
+Plug 'bazelbuild/vim-bazel'
+
 vim.call('plug#end')
