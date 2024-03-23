@@ -60,4 +60,7 @@ Plug 'lewis6991/gitsigns.nvim'
 -- https://github.com/bazelbuild/vim-bazel
 Plug 'bazelbuild/vim-bazel'
 
+-- https://github.com/sgatev/nvim-lucid
+Plug 'sgatev/nvim-lucid'
+
 vim.call('plug#end')
