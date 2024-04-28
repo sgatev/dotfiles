@@ -75,3 +75,6 @@ brew_install fd
 
 # https://clang.llvm.org/docs/ClangFormat.html
 brew_install clang-format
+
+# https://github.com/tldr-pages/tldr
+brew_install tlrc
