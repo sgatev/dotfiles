@@ -63,4 +63,7 @@ Plug 'bazelbuild/vim-bazel'
 -- https://github.com/sgatev/nvim-lucid
 Plug 'sgatev/nvim-lucid'
 
+-- https://github.com/epwalsh/obsidian.nvim
+Plug 'epwalsh/obsidian.nvim'
+
 vim.call('plug#end')
