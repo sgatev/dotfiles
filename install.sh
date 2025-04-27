@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# https://brew.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 function brew_install {
   brew install --quiet $1
 }
@@ -10,9 +13,6 @@ function git_install {
 
 DOTFILES="$(cd `dirname $0` && pwd)"
 ln -f -h -s $DOTFILES ~/.dotfiles
-
-# https://brew.sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # https://sw.kovidgoyal.net/kitty
 brew_install kitty
