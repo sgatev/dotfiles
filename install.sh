@@ -14,6 +14,10 @@ ln -f -h -s $DOTFILES ~/.dotfiles
 # https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# https://sw.kovidgoyal.net/kitty
+brew_install kitty
+mkdir -p ~/.config/kitty && ln -f -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
+
 # http://tmux.github.io
 brew_install tmux
 ln -f -s $DOTFILES/tmux.conf ~/.tmux.conf
