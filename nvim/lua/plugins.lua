@@ -3,7 +3,7 @@ vim.call('plug#begin')
 local Plug = vim.fn['plug#']
 
 -- https://www.nordtheme.com
-Plug 'arcticicestudio/nord-vim'
+Plug 'gbprod/nord.nvim'
 
 -- https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
@@ -44,6 +44,10 @@ Plug 'RRethy/vim-illuminate'
 
 -- https://github.com/folke/which-key.nvim
 Plug 'folke/which-key.nvim'
+
+-- https://github.com/folke/noice.nvim
+Plug 'MunifTanjim/nui.nvim'
+Plug 'folke/noice.nvim'
 
 -- https://github.com/ziglang/zig.vim
 Plug 'ziglang/zig.vim'
