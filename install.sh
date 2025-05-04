@@ -82,3 +82,6 @@ brew_install clang-format
 
 # https://github.com/tldr-pages/tldr
 brew_install tlrc
+
+# install neovim plugins
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
