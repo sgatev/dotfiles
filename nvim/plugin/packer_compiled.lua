@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/sg/.local/share/nvim/site/pack/packer/start/lightline.vim",
     url = "https://github.com/itchyny/lightline.vim"
   },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "/Users/sg/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
+  },
   ["noice.nvim"] = {
     loaded = true,
     path = "/Users/sg/.local/share/nvim/site/pack/packer/start/noice.nvim",
