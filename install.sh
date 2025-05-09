@@ -33,7 +33,6 @@ ln -f -s $DOTFILES/zshrc ~/.zshrc
 git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 
 # font from https://www.nerdfonts.com
-brew tap homebrew/cask-fonts
 brew_install font-fira-code-nerd-font
 
 # https://neovim.io
