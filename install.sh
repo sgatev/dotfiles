@@ -32,7 +32,7 @@ ln -f -s $DOTFILES/zshrc ~/.zshrc
 # https://github.com/Aloxaf/fzf-tab
 git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 
-# font from https://www.nerdfonts.com
+# https://www.nerdfonts.com
 brew_install font-fira-code-nerd-font
 
 # https://neovim.io
@@ -64,7 +64,7 @@ $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish > /dev/null
 # https://github.com/Wilfred/difftastic
 brew_install difftastic
 
-# set up git
+# Set up git.
 ln -f -s $DOTFILES/gitconfig ~/.gitconfig
 
 # https://github.com/fabianishere/pam_reattach
@@ -82,5 +82,5 @@ brew_install clang-format
 # https://github.com/tldr-pages/tldr
 brew_install tlrc
 
-# install neovim plugins
+# Install neovim plugins.
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' 2> /dev/null
