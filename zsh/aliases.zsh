@@ -5,4 +5,5 @@ alias bt="bazel test"
 alias e=nvim
 alias f="fzf --reverse --cycle"
 alias g="git"
+alias j=cdr
 alias l="ls -alG"
