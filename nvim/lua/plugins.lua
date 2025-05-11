@@ -67,9 +67,6 @@ Plug 'bazelbuild/vim-bazel'
 -- https://github.com/sgatev/nvim-lucid
 Plug 'sgatev/nvim-lucid'
 
--- https://github.com/epwalsh/obsidian.nvim
-Plug 'epwalsh/obsidian.nvim'
-
 -- https://github.com/echasnovski/mini.nvim
 Plug 'echasnovski/mini.nvim'
 
