@@ -83,4 +83,4 @@ brew_install clang-format
 brew_install tlrc
 
 # Install neovim plugins.
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync' 2> /dev/null
+nvim +'PlugInstall --sync' +qa
