@@ -83,4 +83,4 @@ brew_install clang-format
 brew_install tlrc
 
 # Install neovim plugins.
-nvim +'PlugInstall --sync' +qa
+nvim --noplugin +'PlugInstall --sync' +qa
