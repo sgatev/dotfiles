@@ -4,6 +4,8 @@ vim.g.lightline = {
   colorscheme = 'nord'
 }
 
+vim.g.mapleader = ','
+
 vim.o.termguicolors = true  -- emit true (24-bit) colors
 vim.o.showmode = false      -- do not show the current mode
 vim.o.number = true         -- show line numbers on the left
