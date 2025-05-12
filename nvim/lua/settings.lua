@@ -1,9 +1,3 @@
--- set up https://www.nordtheme.com
-vim.api.nvim_command('colorscheme nord')
-vim.g.lightline = {
-  colorscheme = 'nord'
-}
-
 vim.g.mapleader = ','
 
 vim.o.termguicolors = true  -- emit true (24-bit) colors
