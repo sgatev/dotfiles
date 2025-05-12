@@ -12,7 +12,6 @@ function git_install {
 }
 
 DOTFILES="$(cd `dirname $0` && pwd)"
-ln -f -h -s $DOTFILES ~/.dotfiles
 
 # https://sw.kovidgoyal.net/kitty
 brew_install kitty
@@ -28,6 +27,7 @@ brew_install zsh
 brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
 ln -f -s $DOTFILES/zshrc ~/.zshrc
+mkdir -p ~/.zsh && ln -f -h -s $DOTFILES/zsh ~/.zsh/init
 
 # https://github.com/Aloxaf/fzf-tab
 git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab

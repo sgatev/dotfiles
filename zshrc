@@ -4,4 +4,4 @@ if [ -z "$TMUX" ]; then
 fi
 
 # Source ZSH configuration.
-for file in ~/.dotfiles/zsh/*.zsh; do; source "$file"; done
+for file in ~/.zsh/init/*.zsh; do; source "$file"; done
