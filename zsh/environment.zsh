@@ -1,4 +1,5 @@
 export EDITOR="nvim"
+export MANPAGER="sh -c 'col -bx | bat -l man -p --theme=ansi'"
 export PATH="$PATH:$HOME/bin"
 export PROMPT=$'%F{blue}%~\n%(?.%F{green}❯.%F{red}❯)%f '
 export WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
