@@ -6,4 +6,5 @@ alias e=nvim
 alias f="fzf --reverse --cycle"
 alias g=git
 alias j=cdr
+alias ls="ls --color=auto"
 alias l="ls -alG"
