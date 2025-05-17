@@ -32,8 +32,8 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
--- https://github.com/easymotion/vim-easymotion
-Plug 'easymotion/vim-easymotion'
+-- https://github.com/smoka7/hop.nvim
+Plug 'smoka7/hop.nvim'
 
 -- https://github.com/mg979/vim-visual-multi
 Plug 'mg979/vim-visual-multi'
