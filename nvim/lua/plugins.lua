@@ -69,4 +69,7 @@ Plug 'sgatev/nvim-lucid'
 -- https://github.com/echasnovski/mini.nvim
 Plug 'echasnovski/mini.nvim'
 
+-- https://github.com/junegunn/limelight.vim
+Plug 'junegunn/limelight.vim'
+
 vim.call('plug#end')
