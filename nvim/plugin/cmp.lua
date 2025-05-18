@@ -1,10 +1,8 @@
-local cmp = require'cmp'
+local cmp = require('cmp')
+local context = require('cmp.config.context')
 
 cmp.setup({
   enabled = function()
-    -- disable completion in comments
-    local context = require 'cmp.config.context'
-    -- keep command mode completion enabled when cursor is in a comment
     if vim.api.nvim_get_mode().mode == 'c' then
       return true
     else
@@ -13,7 +11,6 @@ cmp.setup({
     end
   end,
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
       vim.fn['vsnip#anonymous'](args.body)
     end,
@@ -33,50 +30,40 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
   }, {
     { name = 'buffer' },
-  })
+  }),
 })
 
--- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources({
-    { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+    { name = 'cmp_git' },
   }, {
     { name = 'buffer' },
-  })
+  }),
 })
 
--- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
     { name = 'buffer' }
-  }
+  },
 })
 
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
     { name = 'path' }
   }, {
     { name = 'cmdline' }
-  })
+  }),
 })
 
-require("cmp").setup.filetype('markdown', {
+cmp.setup.filetype('markdown', {
   sources = {},
 })
-
--- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-require'lspconfig'.rust_analyzer.setup {
-  capabilities = capabilities
-}
-require'lspconfig'.clangd.setup{}
