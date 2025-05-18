@@ -1,4 +1,6 @@
-require('mini.move').setup({
+local move = require('mini.move')
+
+move.setup({
   mappings = {
     -- Move visual selection in Visual mode.
     left = '<A-h>',
