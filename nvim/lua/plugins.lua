@@ -72,4 +72,7 @@ Plug('echasnovski/mini.nvim')
 -- https://github.com/junegunn/limelight.vim
 Plug('junegunn/limelight.vim')
 
+-- https://github.com/folke/trouble.nvim
+Plug('folke/trouble.nvim')
+
 vim.call('plug#end')
