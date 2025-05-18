@@ -1,8 +1,8 @@
 local nvim_tmux_navigation = require('nvim-tmux-navigation')
 
-nvim_tmux_navigation.setup {
-    disable_when_zoomed = true -- defaults to false
-}
+nvim_tmux_navigation.setup({
+  disable_when_zoomed = true,
+})
 
 vim.keymap.set('n', "<C-h>", nvim_tmux_navigation.NvimTmuxNavigateLeft)
 vim.keymap.set('n', "<C-j>", nvim_tmux_navigation.NvimTmuxNavigateDown)
