@@ -82,5 +82,14 @@ brew_install clang-format
 # https://github.com/tldr-pages/tldr
 brew_install tlrc
 
+# https://luals.github.io
+brew_install lua-language-server
+
+# https://github.com/bash-lsp/bash-language-server
+brew_install bash-language-server
+
+# https://github.com/mvdan/sh#shfmt
+brew_install shfmt
+
 # Install neovim plugins.
 nvim --noplugin +'PlugInstall --sync' +qa
