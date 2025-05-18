@@ -11,7 +11,7 @@ function git_install {
   git -C $2 pull --quiet || git clone --quiet $1 $2
 }
 
-DOTFILES="$(cd `dirname $0` && pwd)"
+DOTFILES="$(cd $(dirname $0) && pwd)"
 
 # https://sw.kovidgoyal.net/kitty
 brew_install kitty
@@ -59,7 +59,7 @@ brew_install rust-analyzer
 
 # https://github.com/junegunn/fzf
 brew_install fzf
-$(brew --prefix)/opt/fzf/install --all --no-bash --no-fish > /dev/null
+$(brew --prefix)/opt/fzf/install --all --no-bash --no-fish >/dev/null
 
 # https://github.com/Wilfred/difftastic
 brew_install difftastic
