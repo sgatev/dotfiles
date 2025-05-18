@@ -8,11 +8,6 @@ Plug('gbprod/nord.nvim')
 -- https://github.com/itchyny/lightline.vim
 Plug('itchyny/lightline.vim')
 
--- https://github.com/google/vim-codefmt
-Plug('google/vim-maktaba')
-Plug('google/vim-codefmt')
-Plug('google/vim-glaive')
-
 -- https://github.com/nvim-treesitter/nvim-treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 
@@ -59,9 +54,6 @@ Plug('alexghergh/nvim-tmux-navigation')
 
 -- https://github.com/lewis6991/gitsigns.nvim
 Plug('lewis6991/gitsigns.nvim')
-
--- https://github.com/bazelbuild/vim-bazel
-Plug('bazelbuild/vim-bazel')
 
 -- https://github.com/sgatev/nvim-lucid
 Plug('sgatev/nvim-lucid')
