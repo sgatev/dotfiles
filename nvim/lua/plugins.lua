@@ -16,6 +16,9 @@ Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
 
+-- https://github.com/stevearc/oil.nvim
+Plug('stevearc/oil.nvim')
+
 -- https://github.com/hrsh7th/nvim-cmp
 Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/cmp-nvim-lsp')
@@ -23,6 +26,13 @@ Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
 Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/nvim-cmp')
+
+-- https://github.com/folke/trouble.nvim
+Plug('folke/trouble.nvim')
+
+-- https://github.com/folke/noice.nvim
+Plug('MunifTanjim/nui.nvim')
+Plug('folke/noice.nvim')
 
 -- https://github.com/smoka7/hop.nvim
 Plug('smoka7/hop.nvim')
@@ -35,16 +45,6 @@ Plug('RRethy/vim-illuminate')
 
 -- https://github.com/folke/which-key.nvim
 Plug('folke/which-key.nvim')
-
--- https://github.com/folke/noice.nvim
-Plug('MunifTanjim/nui.nvim')
-Plug('folke/noice.nvim')
-
--- https://github.com/ziglang/zig.vim
-Plug('ziglang/zig.vim')
-
--- https://github.com/stevearc/oil.nvim
-Plug('stevearc/oil.nvim')
 
 -- https://github.com/alexghergh/nvim-tmux-navigation
 Plug('alexghergh/nvim-tmux-navigation')
@@ -60,8 +60,5 @@ Plug('echasnovski/mini.nvim')
 
 -- https://github.com/junegunn/limelight.vim
 Plug('junegunn/limelight.vim')
-
--- https://github.com/folke/trouble.nvim
-Plug('folke/trouble.nvim')
 
 vim.call('plug#end')
