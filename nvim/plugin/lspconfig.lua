@@ -15,4 +15,4 @@ lspconfig.lua_ls.setup({})
 
 lspconfig.bashls.setup({})
 
-vim.keymap.set('n', '<leader>cf', function() vim.lsp.buf.format() end, { desc = 'Format buffer' })
+vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format, { desc = 'Format buffer' })
