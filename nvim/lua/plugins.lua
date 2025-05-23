@@ -61,4 +61,8 @@ Plug('echasnovski/mini.nvim')
 -- https://github.com/junegunn/limelight.vim
 Plug('junegunn/limelight.vim')
 
+-- https://github.com/kevinhwang91/nvim-ufo
+Plug('kevinhwang91/promise-async')
+Plug('kevinhwang91/nvim-ufo')
+
 vim.call('plug#end')
