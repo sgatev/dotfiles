@@ -11,10 +11,8 @@ Plug('nvim-lualine/lualine.nvim')
 -- https://github.com/nvim-treesitter/nvim-treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 
--- https://github.com/nvim-telescope/telescope.nvim
-Plug('nvim-lua/plenary.nvim')
-Plug('nvim-telescope/telescope.nvim')
-Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
+-- https://github.com/ibhagwan/fzf-lua
+Plug('ibhagwan/fzf-lua')
 
 -- https://github.com/stevearc/oil.nvim
 Plug('stevearc/oil.nvim')
