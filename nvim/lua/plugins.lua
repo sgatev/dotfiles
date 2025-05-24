@@ -37,9 +37,6 @@ Plug('folke/noice.nvim')
 -- https://github.com/smoka7/hop.nvim
 Plug('smoka7/hop.nvim')
 
--- https://github.com/mg979/vim-visual-multi
-Plug('mg979/vim-visual-multi')
-
 -- https://github.com/RRethy/vim-illuminate
 Plug('RRethy/vim-illuminate')
 
