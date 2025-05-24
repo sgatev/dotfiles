@@ -19,8 +19,8 @@ mkdir -p ~/.config/kitty && ln -f -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.
 
 # http://tmux.github.io
 brew_install tmux
-ln -f -s $DOTFILES/tmux.conf ~/.tmux.conf
-git_install https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+mkdir -p ~/.config && ln -f -s $DOTFILES/tmux ~/.config/
+git_install https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # https://zsh.org
 brew_install zsh
