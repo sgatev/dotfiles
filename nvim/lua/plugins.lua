@@ -5,9 +5,6 @@ local Plug = vim.fn['plug#']
 -- https://www.nordtheme.com
 Plug('gbprod/nord.nvim')
 
--- https://github.com/nvim-lualine/lualine.nvim
-Plug('nvim-lualine/lualine.nvim')
-
 -- https://github.com/nvim-treesitter/nvim-treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 
