@@ -70,7 +70,7 @@ $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish >/dev/null
 brew_install difftastic
 
 # Set up git.
-ln -f -s $DOTFILES/gitconfig ~/.gitconfig
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/git ~/.config/
 
 # https://github.com/fabianishere/pam_reattach
 brew_install pam-reattach
