@@ -24,6 +24,9 @@ brew_install tmux
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/tmux ~/.config/
 git_install https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
+# Install tmux plugins.
+/bin/bash ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
+
 # https://zsh.org
 brew_install zsh
 brew_install zsh-autosuggestions
