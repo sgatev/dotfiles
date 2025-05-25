@@ -19,7 +19,7 @@ mkdir -p ~/.config/kitty && ln -f -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.
 
 # http://tmux.github.io
 brew_install tmux
-mkdir -p ~/.config && ln -f -s $DOTFILES/tmux ~/.config/
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/tmux ~/.config/
 git_install https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # https://zsh.org
@@ -39,7 +39,7 @@ brew_install font-fira-code-nerd-font
 brew_install neovim
 sh -c 'curl -sfLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-mkdir -p ~/.config && ln -f -s $DOTFILES/nvim ~/.config/
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/nvim ~/.config/
 
 # https://bazel.build
 brew_install bazelisk
