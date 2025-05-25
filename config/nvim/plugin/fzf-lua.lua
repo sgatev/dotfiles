@@ -7,6 +7,6 @@ fzf_lua.setup({
   },
 })
 
-vim.keymap.set('n', '<leader>fb', fzf_lua.buffers, { desc = 'Fzf buffers' })
-vim.keymap.set('n', '<leader>ff', fzf_lua.files, { desc = 'Fzf files' })
-vim.keymap.set('n', '<leader>fg', fzf_lua.live_grep, { desc = 'Fzf grep' })
+vim.keymap.set('n', '<leader>fb', fzf_lua.buffers, { desc = 'Find buffers' })
+vim.keymap.set('n', '<leader>ff', fzf_lua.files, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>fg', fzf_lua.live_grep, { desc = 'Grep in files' })
