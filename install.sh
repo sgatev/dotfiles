@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
