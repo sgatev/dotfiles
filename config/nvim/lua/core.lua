@@ -1,7 +1,6 @@
 vim.g.mapleader = ','
 
 vim.o.clipboard = 'unnamed'                                 -- Copy/paste to system clipboard.
-vim.o.conceallevel = 2                                      -- Hide concealed text.
 vim.o.cursorline = true                                     -- Highlight the current line.
 vim.o.expandtab = true                                      -- Expand tab to spaces.
 vim.o.hlsearch = false                                      -- Do not highlight search matches.
