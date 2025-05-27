@@ -8,6 +8,7 @@ vim.o.number = true                                         -- Show line numbers
 vim.o.relativenumber = true                                 -- Show relative line numbers.
 vim.o.shiftwidth = 2                                        -- Indent with 2 spaces.
 vim.o.showmode = false                                      -- Do not show the current mode.
+vim.o.signcolumn = 'yes'                                    -- Show sign column by default.
 vim.o.softtabstop = 2                                       -- Show existing tabs as 2 spaces.
 vim.o.statusline = "%!v:lua.require('statusline').render()" -- Render status line.
 vim.o.tabstop = 2                                           -- Emit 2 spaces on tab.
