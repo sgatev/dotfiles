@@ -13,6 +13,7 @@ vim.o.softtabstop = 2                                       -- Show existing tab
 vim.o.statusline = "%!v:lua.require('statusline').render()" -- Render status line.
 vim.o.tabstop = 2                                           -- Emit 2 spaces on tab.
 vim.o.termguicolors = true                                  -- Emit true (24-bit) colors.
+vim.opt.fillchars = { eob = ' ' }                           -- No signs on empty lines.
 
 -- Buffer navigation.
 vim.keymap.set('n', 'L', '<cmd>bnext<cr>')
