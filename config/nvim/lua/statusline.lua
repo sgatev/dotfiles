@@ -109,6 +109,19 @@ local function render_diagnostics()
   return last_diagnostics
 end
 
+--- Renders the active LSP client for the current buffer.
+--- @return string?
+local function render_lsp()
+  local active_clients = vim.iter(vim.lsp.get_clients()):filter(function(client)
+    return vim.iter(client.config.filetypes):any(function(filetype)
+      return filetype == vim.bo.filetype
+    end)
+  end):totable()
+  if #active_clients == 0 then return nil end
+  if #active_clients > 1 then return string.format('%d ls clients', #active_clients) end
+  return active_clients[1].name
+end
+
 --- Renders the encoding of the file loaded in current buffer.
 --- @return string
 local function render_encoding()
@@ -134,6 +147,7 @@ function M.render()
       concat_components({
         render_noice_mode(),
         render_diagnostics(),
+        render_lsp(),
         render_encoding(),
       })
 end
