@@ -57,4 +57,7 @@ Plug('junegunn/limelight.vim')
 Plug('kevinhwang91/promise-async')
 Plug('kevinhwang91/nvim-ufo')
 
+-- https://github.com/ziglang/zig.vim
+Plug('ziglang/zig.vim')
+
 vim.call('plug#end')
