@@ -1,14 +1,12 @@
-local cmp_nvim_lsp = require('cmp_nvim_lsp')
+local blink_cmp = require('blink.cmp')
 local lspconfig = require('lspconfig')
 local fzf_lua = require('fzf-lua')
 
 vim.lsp.set_log_level("off")
 
-lspconfig.rust_analyzer.setup({
-  capabilities = cmp_nvim_lsp.default_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  ),
-})
+vim.lsp.config('*', { capabilities = blink_cmp.get_lsp_capabilities(nil, true) })
+
+lspconfig.rust_analyzer.setup({})
 
 lspconfig.zls.setup({})
 
