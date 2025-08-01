@@ -16,6 +16,8 @@ lspconfig.lua_ls.setup({})
 
 lspconfig.bashls.setup({})
 
+lspconfig.gopls.setup({})
+
 vim.keymap.set('n', '<leader>cD', vim.lsp.buf.definition, { desc = 'Jump to definition' })
 vim.keymap.set('n', '<leader>ca', fzf_lua.lsp_code_actions, { desc = 'Open code actions' })
 vim.keymap.set('n', '<leader>cc', fzf_lua.lsp_incoming_calls, { desc = 'Open incoming calls' })

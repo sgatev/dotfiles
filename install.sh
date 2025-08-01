@@ -56,6 +56,7 @@ brew_install bat
 
 # http://golang.org
 brew_install go
+brew_install gopls
 
 # http://rust-lang.org
 brew_install rustup
