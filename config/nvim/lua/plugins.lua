@@ -56,4 +56,10 @@ Plug('kevinhwang91/nvim-ufo')
 -- https://github.com/ziglang/zig.vim
 Plug('ziglang/zig.vim')
 
+-- https://github.com/nvim-lua/plenary.nvim
+Plug('nvim-lua/plenary.nvim')
+
+-- https://github.com/Julian/lean.nvim
+Plug('Julian/lean.nvim')
+
 vim.call('plug#end')
