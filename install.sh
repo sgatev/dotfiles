@@ -19,6 +19,10 @@ DOTFILES="$(cd $(dirname $0) && pwd)"
 brew_install kitty
 mkdir -p ~/.config/kitty && ln -f -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
 
+# https://ghostty.org
+brew_install ghostty
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/ghostty ~/.config/
+
 # http://tmux.github.io
 brew_install tmux
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/tmux ~/.config/
