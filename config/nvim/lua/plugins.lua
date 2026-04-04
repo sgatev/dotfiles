@@ -40,9 +40,6 @@ Plug('alexghergh/nvim-tmux-navigation')
 -- https://github.com/lewis6991/gitsigns.nvim
 Plug('lewis6991/gitsigns.nvim')
 
--- https://github.com/sgatev/nvim-lucid
-Plug('sgatev/nvim-lucid')
-
 -- https://github.com/echasnovski/mini.nvim
 Plug('echasnovski/mini.nvim')
 

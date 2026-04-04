@@ -1,22 +1,27 @@
 local blink_cmp = require('blink.cmp')
-local lspconfig = require('lspconfig')
 local fzf_lua = require('fzf-lua')
 
 vim.lsp.set_log_level("off")
 
-vim.lsp.config('*', { capabilities = blink_cmp.get_lsp_capabilities(nil, true) })
+vim.lsp.config('*', {
+  capabilities = blink_cmp.get_lsp_capabilities(nil, true),
+})
 
-lspconfig.rust_analyzer.setup({})
+vim.lsp.enable('clangd')
 
-lspconfig.zls.setup({})
+vim.lsp.config('rust_analyzer', {
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+})
 
-lspconfig.clangd.setup({})
+vim.lsp.enable('zls')
 
-lspconfig.lua_ls.setup({})
+vim.lsp.enable('gopls')
 
-lspconfig.bashls.setup({})
+vim.lsp.config('lua_ls', {})
 
-lspconfig.gopls.setup({})
+vim.lsp.enable('bashls')
 
 vim.keymap.set('n', '<leader>cD', vim.lsp.buf.definition, { desc = 'Jump to definition' })
 vim.keymap.set('n', '<leader>ca', fzf_lua.lsp_code_actions, { desc = 'Open code actions' })

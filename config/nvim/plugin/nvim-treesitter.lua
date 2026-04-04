@@ -1,6 +1,6 @@
-local nvim_treesitter_config = require('nvim-treesitter.configs')
+local nvim_treesitter = require('nvim-treesitter')
 
-nvim_treesitter_config.setup({
+nvim_treesitter.setup({
   ensure_installed = {
     "bash",
     "lua",
