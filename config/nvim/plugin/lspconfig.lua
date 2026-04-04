@@ -1,3 +1,7 @@
+vim.pack.add({
+  'https://github.com/neovim/nvim-lspconfig',
+})
+
 local fzf_lua = require('fzf-lua')
 
 vim.lsp.set_log_level("off")

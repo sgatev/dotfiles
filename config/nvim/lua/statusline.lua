@@ -1,5 +1,3 @@
-local noice = require("noice")
-
 --- @type table<string, boolean>
 local diag_hls = {}
 
@@ -74,7 +72,7 @@ end
 --- Renders the current noice mode.
 --- @return string?
 local function render_noice_mode()
-  local noice_mode = noice.api.statusline.mode
+  local noice_mode = require("noice").api.statusline.mode
   return noice_mode:has() and noice_mode:get() or nil
 end
 
