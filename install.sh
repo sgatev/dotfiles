@@ -96,6 +96,3 @@ brew_install bash-language-server
 
 # https://github.com/mvdan/sh#shfmt
 brew_install shfmt
-
-# Install neovim plugins.
-nvim --noplugin +'PlugInstall --sync' +qa
