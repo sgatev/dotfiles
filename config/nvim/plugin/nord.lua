@@ -1,3 +1,7 @@
+vim.pack.add({
+  'https://github.com/gbprod/nord.nvim',
+})
+
 vim.cmd.colorscheme('nord')
 
 vim.api.nvim_set_hl(0, 'StatusLineBright', { fg = '#D8DEE9', bg = '#2E3440' })

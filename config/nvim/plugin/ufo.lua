@@ -1,3 +1,8 @@
+vim.pack.add({
+  'https://github.com/kevinhwang91/nvim-ufo',
+  'https://github.com/kevinhwang91/promise-async',
+})
+
 local ufo = require('ufo')
 local lspconfig = require('lspconfig')
 

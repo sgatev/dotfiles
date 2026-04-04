@@ -1,3 +1,7 @@
+vim.pack.add({
+  'https://github.com/ibhagwan/fzf-lua',
+})
+
 local fzf_lua = require('fzf-lua')
 
 fzf_lua.setup({

@@ -1,3 +1,7 @@
+vim.pack.add({
+  'https://github.com/Julian/lean.nvim',
+})
+
 local lean = require('lean')
 
 lean.setup({

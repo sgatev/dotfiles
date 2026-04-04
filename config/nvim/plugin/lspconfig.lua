@@ -1,11 +1,6 @@
-local blink_cmp = require('blink.cmp')
 local fzf_lua = require('fzf-lua')
 
 vim.lsp.set_log_level("off")
-
-vim.lsp.config('*', {
-  capabilities = blink_cmp.get_lsp_capabilities(nil, true),
-})
 
 vim.lsp.enable('clangd')
 

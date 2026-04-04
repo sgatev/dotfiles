@@ -1,3 +1,7 @@
+vim.pack.add({
+  'https://github.com/echasnovski/mini.nvim',
+})
+
 local move = require('mini.move')
 
 move.setup({

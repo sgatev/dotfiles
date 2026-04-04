@@ -1,3 +1,7 @@
+vim.pack.add({
+  'https://github.com/smoka7/hop.nvim',
+})
+
 local hop = require('hop')
 
 hop.setup({

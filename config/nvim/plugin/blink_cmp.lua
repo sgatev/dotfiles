@@ -1,3 +1,10 @@
+vim.pack.add({
+  {
+    src = 'https://github.com/saghen/blink.cmp',
+    version = vim.version.range('*')
+  },
+})
+
 local blink_cmp = require('blink.cmp')
 
 blink_cmp.setup({
@@ -15,4 +22,8 @@ blink_cmp.setup({
   fuzzy = {
     implementation = "prefer_rust_with_warning",
   },
+})
+
+vim.lsp.config('*', {
+  capabilities = blink_cmp.get_lsp_capabilities(nil, true),
 })
