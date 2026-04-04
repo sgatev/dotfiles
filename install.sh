@@ -15,10 +15,6 @@ function git_install {
 
 DOTFILES="$(cd $(dirname $0) && pwd)"
 
-# https://sw.kovidgoyal.net/kitty
-brew_install kitty
-mkdir -p ~/.config/kitty && ln -f -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
-
 # https://ghostty.org
 brew_install ghostty
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/ghostty ~/.config/
