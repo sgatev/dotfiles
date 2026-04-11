@@ -1,16 +1,16 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "6731979aa370be0e5c7cc73258ce945730a515c9",
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
       "version": ">=0.0.0"
     },
     "fzf-lua": {
-      "rev": "abacb0693d7a37de9e85e6fcb2d22d848cb75cef",
+      "rev": "657c1bbb7357c61e26a20d868b53a460b05c18c0",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "944ef13cc8d8fe8b846c91f36041c8dfb85ca000",
+      "rev": "8d82c240f190fc33723d48c308ccc1ed8baad69d",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "hop.nvim": {
@@ -18,7 +18,7 @@
       "src": "https://github.com/smoka7/hop.nvim"
     },
     "lean.nvim": {
-      "rev": "58c6d4819ef433ba141cd4e3604a0316c83d99de",
+      "rev": "4f786e0e2d85b7012fadf5563c8ee2c4e09211ca",
       "src": "https://github.com/Julian/lean.nvim"
     },
     "limelight.vim": {
@@ -26,7 +26,7 @@
       "src": "https://github.com/junegunn/limelight.vim"
     },
     "mini.nvim": {
-      "rev": "402ee6c6ec8ea44b22330446c8fb4e615fd3953e",
+      "rev": "69b7433355664cf76898eb86a12a019f39bd86d1",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "noice.nvim": {
@@ -42,7 +42,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "9ccd58a7949091c0cc2777d4e92a45a209c808c1",
+      "rev": "cb5bc0b2b35a6d513e3298d285db81453e791f4f",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-tmux-navigation": {
