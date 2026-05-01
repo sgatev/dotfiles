@@ -6,7 +6,7 @@
       "version": ">=0.0.0"
     },
     "fzf-lua": {
-      "rev": "33321eba594f530e23a6b8970ba0b5fd695c8bba",
+      "rev": "b437bafc981a180d609bb4092c56ce8999f7a2c4",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
@@ -18,7 +18,7 @@
       "src": "https://github.com/smoka7/hop.nvim"
     },
     "lean.nvim": {
-      "rev": "6fd166b073a29f96d1bd796af7012f24424e28ea",
+      "rev": "999fab45a246478148ea54501f3bfc1e07a208a2",
       "src": "https://github.com/Julian/lean.nvim"
     },
     "limelight.vim": {
@@ -42,7 +42,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "21db1fd40cbcbf1524ae154ab8f394fdf085749a",
+      "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-tmux-navigation": {
