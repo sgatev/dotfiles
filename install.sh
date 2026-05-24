@@ -60,7 +60,7 @@ brew_install gopls
 
 # http://rust-lang.org
 brew_install rustup
-rustup-init -y -q
+rustup default stable
 brew_install rust-analyzer
 
 # https://github.com/junegunn/fzf
