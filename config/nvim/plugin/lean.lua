@@ -4,14 +4,15 @@ vim.pack.add({
 
 local lean = require('lean')
 
-lean.setup({
+vim.g.lean_config = {
   lsp = {
     init_options = {
-      -- Time (in milliseconds) which must pass since latest edit until elaboration begins.
+      -- Time (in milliseconds) which must pass since latest edit until elaboration
+      -- begins.
       editDelay = 0,
 
       -- Whether to signal that widgets are supported.
       hasWidgets = true,
     }
   },
-})
+}
