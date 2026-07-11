@@ -18,7 +18,7 @@
       "src": "https://github.com/smoka7/hop.nvim"
     },
     "lean.nvim": {
-      "rev": "32fb8aa2edf3f172c307957dc7083e6c7f6caa7e",
+      "rev": "00d9d433a63bbc3ef029273f9fa73d91158f3337",
       "src": "https://github.com/Julian/lean.nvim"
     },
     "limelight.vim": {
@@ -26,7 +26,7 @@
       "src": "https://github.com/junegunn/limelight.vim"
     },
     "mini.nvim": {
-      "rev": "c5cdbadeb423ff724e27a42ab2d1c504d1d6fc5a",
+      "rev": "4171fba613b64ade9a28e198bd5b4fea5ba45e22",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "noice.nvim": {
@@ -42,7 +42,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "292f44408498103c47996ff5c18fd366293840d8",
+      "rev": "5955a100ae7155962330643924e21a798b9bdc91",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-tmux-navigation": {
@@ -70,7 +70,7 @@
       "src": "https://github.com/folke/trouble.nvim"
     },
     "vim-illuminate": {
-      "rev": "0d1e93684da00ab7c057410fecfc24f434698898",
+      "rev": "8629e6b2dfa8c66677b9d489eb02480cbcfa9599",
       "src": "https://github.com/RRethy/vim-illuminate"
     },
     "which-key.nvim": {
