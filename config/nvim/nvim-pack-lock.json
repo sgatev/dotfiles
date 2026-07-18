@@ -6,11 +6,11 @@
       "version": ">=0.0.0"
     },
     "fzf-lua": {
-      "rev": "d2084cf776049b4bce6764eb58cda567dec781c4",
+      "rev": "532d463f5c83595192fe740572d8fd6902b2217a",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "eb60cc7b94c46005237fd34170d76f3a089a90aa",
+      "rev": "31d6fb2d618bca1482b9f274751ead5f03461408",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "hop.nvim": {
@@ -18,7 +18,7 @@
       "src": "https://github.com/smoka7/hop.nvim"
     },
     "lean.nvim": {
-      "rev": "00d9d433a63bbc3ef029273f9fa73d91158f3337",
+      "rev": "c2d274ed26192fbf43f222d24a8f0d08d1c617f9",
       "src": "https://github.com/Julian/lean.nvim"
     },
     "limelight.vim": {
@@ -26,7 +26,7 @@
       "src": "https://github.com/junegunn/limelight.vim"
     },
     "mini.nvim": {
-      "rev": "4171fba613b64ade9a28e198bd5b4fea5ba45e22",
+      "rev": "9459d7f41ae77d909579dab0aea2bdd3210fac9f",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "noice.nvim": {
@@ -42,7 +42,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "5955a100ae7155962330643924e21a798b9bdc91",
+      "rev": "e7ca2c95ba316a8b846d3f3546d407908c5c4ccb",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-tmux-navigation": {
@@ -70,7 +70,7 @@
       "src": "https://github.com/folke/trouble.nvim"
     },
     "vim-illuminate": {
-      "rev": "8629e6b2dfa8c66677b9d489eb02480cbcfa9599",
+      "rev": "91313e598ca62e110bc71535c49069b66b9883c9",
       "src": "https://github.com/RRethy/vim-illuminate"
     },
     "which-key.nvim": {
