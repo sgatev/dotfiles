@@ -6,21 +6,12 @@ local fzf_lua = require('fzf-lua')
 
 vim.lsp.set_log_level("off")
 
-vim.lsp.enable('clangd')
-
-vim.lsp.config('rust_analyzer', {
-  settings = {
-    ['rust-analyzer'] = {},
-  },
-})
-
-vim.lsp.enable('zls')
-
-vim.lsp.enable('gopls')
-
-vim.lsp.config('lua_ls', {})
-
 vim.lsp.enable('bashls')
+vim.lsp.enable('clangd')
+vim.lsp.enable('gopls')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('zls')
 
 -- Formats a buffer.
 local function format()
