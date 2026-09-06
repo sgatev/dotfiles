@@ -2,6 +2,8 @@
 
 set -e
 
+DOTFILES="$(cd $(dirname $0) && pwd)"
+
 # https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
@@ -12,8 +14,6 @@ function brew_install {
 function git_install {
   git -C $2 pull --quiet || git clone --quiet $1 $2
 }
-
-DOTFILES="$(cd $(dirname $0) && pwd)"
 
 # https://ghostty.org
 brew_install ghostty
@@ -42,8 +42,6 @@ brew_install font-fira-code-nerd-font
 
 # https://neovim.io
 brew_install neovim
-sh -c 'curl -sfLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/nvim ~/.config/
 
 # https://bazel.build
@@ -67,11 +65,11 @@ brew_install rust-analyzer
 brew_install fzf
 $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish >/dev/null
 
+# https://git-scm.com
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/git ~/.config/
+
 # https://github.com/Wilfred/difftastic
 brew_install difftastic
-
-# Set up git.
-mkdir -p ~/.config && ln -f -s $DOTFILES/config/git ~/.config/
 
 # https://github.com/fabianishere/pam_reattach
 brew_install pam-reattach
