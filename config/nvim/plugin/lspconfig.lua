@@ -4,8 +4,6 @@ vim.pack.add({
 
 local fzf_lua = require('fzf-lua')
 
-vim.lsp.set_log_level("off")
-
 vim.lsp.enable('bashls')
 vim.lsp.enable('clangd')
 vim.lsp.enable('gopls')
