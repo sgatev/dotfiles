@@ -72,7 +72,10 @@ end
 --- Renders the current noice mode.
 --- @return string?
 local function render_noice_mode()
-  local noice_mode = require("noice").api.statusline.mode
+  local ok, noice = pcall(require, 'noice')
+  if not ok then return nil end
+
+  local noice_mode = noice.api.statusline.mode
   return noice_mode:has() and noice_mode:get() or nil
 end
 
