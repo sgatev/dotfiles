@@ -17,6 +17,7 @@ local install = nvim_treesitter.install({
   'markdown',
   'markdown_inline',
   'rust',
+  'starlark',
   'zig',
 })
 
