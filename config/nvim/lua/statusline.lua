@@ -114,7 +114,7 @@ end
 --- Renders the active LSP client for the current buffer.
 --- @return string?
 local function render_lsp()
-  local active_clients = vim.lsp.get_clients()
+  local active_clients = vim.lsp.get_clients({ bufnr = 0 })
   if #active_clients == 0 then return nil end
   if #active_clients > 1 then return string.format('%d lsp clients', #active_clients) end
   return active_clients[1].name
