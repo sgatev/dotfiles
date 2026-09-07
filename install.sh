@@ -50,6 +50,7 @@ nvim --headless -c 'qa!' # Install plugins and treesitter parsers.
 # https://bazel.build
 brew_install bazelisk
 brew tap bazelbuild/tap
+brew trust --formula bazelbuild/tap/ibazel
 brew_install bazelbuild/tap/ibazel
 
 # https://github.com/sharkdp/bat
