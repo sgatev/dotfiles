@@ -1,21 +1,33 @@
 --- @type table<string, boolean>
 local diag_hls = {}
 
+--- Formats a highlight color as a hex string, if it is defined.
+--- @param color integer?
+--- @return string?
+local function hex(color)
+  return color and ('#%06x'):format(color) or nil
+end
+
 --- @param diag_hl string
 --- @return string
 local function make_diag_hl(diag_hl)
   local hl = 'StatusLine' .. diag_hl
   if not diag_hls[diag_hl] then
-    local default = vim.api.nvim_get_hl(0, { name = 'StatusLineDefault' })
-    local diag = vim.api.nvim_get_hl(0, { name = diag_hl })
+    local default = vim.api.nvim_get_hl(0, { name = 'StatusLineDefault', link = false })
+    local diag = vim.api.nvim_get_hl(0, { name = diag_hl, link = false })
     vim.api.nvim_set_hl(0, hl, {
-      bg = ('#%06x'):format(default.bg),
-      fg = ('#%06x'):format(diag.fg),
+      bg = hex(default.bg),
+      fg = hex(diag.fg),
     })
     diag_hls[diag_hl] = true
   end
   return hl
 end
+
+-- Loading a colorscheme clears these derived groups, so build them again.
+vim.api.nvim_create_autocmd('ColorScheme', {
+  callback = function() diag_hls = {} end,
+})
 
 --- Renders the current mode.
 --- @return string
