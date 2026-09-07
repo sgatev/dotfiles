@@ -42,7 +42,9 @@ brew_install font-fira-code-nerd-font
 
 # https://neovim.io
 brew_install neovim
+brew_install tree-sitter-cli # Required by nvim-treesitter to compile parsers.
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/nvim ~/.config/
+nvim --headless -c 'qa!' # Install plugins and treesitter parsers.
 
 # https://bazel.build
 brew_install bazelisk
@@ -60,6 +62,10 @@ brew_install gopls
 brew_install rustup
 rustup default stable
 brew_install rust-analyzer
+
+# https://ziglang.org
+brew_install zig
+brew_install zls
 
 # https://github.com/junegunn/fzf
 brew_install fzf

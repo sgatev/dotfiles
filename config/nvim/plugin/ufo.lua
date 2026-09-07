@@ -4,20 +4,6 @@ vim.pack.add({
 })
 
 local ufo = require('ufo')
-local lspconfig = require('lspconfig')
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.foldingRange = {
-  dynamicRegistration = false,
-  lineFoldingOnly = true
-}
-
-local language_servers = vim.lsp.get_clients()
-for _, ls in ipairs(language_servers) do
-  lspconfig[ls].setup({
-    capabilities = capabilities
-  })
-end
 
 ufo.setup()
 

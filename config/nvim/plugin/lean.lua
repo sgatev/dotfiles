@@ -2,17 +2,13 @@ vim.pack.add({
   'https://github.com/Julian/lean.nvim',
 })
 
-local lean = require('lean')
+vim.lsp.config('leanls', {
+  init_options = {
+    -- Time (in milliseconds) which must pass since latest edit until elaboration
+    -- begins.
+    editDelay = 0,
 
-vim.g.lean_config = {
-  lsp = {
-    init_options = {
-      -- Time (in milliseconds) which must pass since latest edit until elaboration
-      -- begins.
-      editDelay = 0,
-
-      -- Whether to signal that widgets are supported.
-      hasWidgets = true,
-    }
+    -- Whether to signal that widgets are supported.
+    hasWidgets = true,
   },
-}
+})
