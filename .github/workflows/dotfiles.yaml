@@ -19,6 +19,8 @@ jobs:
           fi
       - name: Verify installed tools
         run: |
+          # Homebrew keeps rustup keg-only, so cargo is not linked into its prefix.
+          export PATH="$(brew --prefix rustup)/bin:$PATH"
           status=0
           for tool in nvim tmux zsh tree-sitter bazel ibazel bat go gopls \
             rustup rust-analyzer cargo fzf difft rg fd clang-format tldr starpls \
