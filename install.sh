@@ -53,6 +53,11 @@ brew tap bazelbuild/tap
 brew trust --formula bazelbuild/tap/ibazel
 brew_install bazelbuild/tap/ibazel
 
+# https://github.com/withered-magic/starpls
+brew tap withered-magic/brew
+brew trust --formula withered-magic/brew/starpls
+brew_install withered-magic/brew/starpls
+
 # https://github.com/sharkdp/bat
 brew_install bat
 
