@@ -1,5 +1,5 @@
 vim.pack.add({
-  'https://github.com/echasnovski/mini.nvim',
+  'https://github.com/echasnovski/mini.move',
 })
 
 local move = require('mini.move')

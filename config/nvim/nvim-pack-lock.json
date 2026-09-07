@@ -25,6 +25,10 @@
       "rev": "617064e84e896f6f36b5e559f8e6486d632f68ed",
       "src": "https://github.com/junegunn/limelight.vim"
     },
+    "mini.move": {
+      "rev": "48fcaac289a19b8eff2fd5fe203267d478a8abdc",
+      "src": "https://github.com/echasnovski/mini.move"
+    },
     "mini.nvim": {
       "rev": "ee23d71c02440668cbca5b0cd8640d79d5bc250b",
       "src": "https://github.com/echasnovski/mini.nvim"
