@@ -18,6 +18,7 @@ function git_install {
 # https://ghostty.org
 brew_install ghostty
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/ghostty ~/.config/
+git_install https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
 
 # http://tmux.github.io
 brew_install tmux
