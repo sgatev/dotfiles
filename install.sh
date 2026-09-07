@@ -65,6 +65,10 @@ brew_install bat
 brew_install go
 brew_install gopls
 
+# https://lean-lang.org
+brew_install elan-init
+elan default stable
+
 # http://rust-lang.org
 brew_install rustup
 rustup default stable

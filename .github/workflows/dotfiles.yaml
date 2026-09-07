@@ -24,7 +24,8 @@ jobs:
           status=0
           for tool in nvim tmux zsh tree-sitter bazel ibazel bat go gopls \
             rustup rust-analyzer cargo fzf difft rg fd clang-format tldr starpls \
-            lua-language-server bash-language-server shfmt zig zls; do
+            lua-language-server bash-language-server shfmt zig zls \
+            elan lean lake; do
             if command -v "$tool" >/dev/null; then
               echo "  $tool"
             else
