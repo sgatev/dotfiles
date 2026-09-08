@@ -41,6 +41,9 @@ git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
 # https://www.nerdfonts.com
 brew_install font-fira-code-nerd-font
 
+# https://claude.com/product/claude-code
+brew_install claude-code
+
 # https://neovim.io
 brew_install neovim
 brew_install tree-sitter-cli # Required by nvim-treesitter to compile parsers.
@@ -52,6 +55,9 @@ brew_install bazelisk
 brew tap bazelbuild/tap
 brew trust --formula bazelbuild/tap/ibazel
 brew_install bazelbuild/tap/ibazel
+
+# https://github.com/bazelbuild/buildtools
+brew_install buildifier
 
 # https://github.com/withered-magic/starpls
 brew tap withered-magic/brew

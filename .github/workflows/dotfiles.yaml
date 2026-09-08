@@ -22,7 +22,7 @@ jobs:
           # Homebrew keeps rustup keg-only, so cargo is not linked into its prefix.
           export PATH="$(brew --prefix rustup)/bin:$PATH"
           status=0
-          for tool in nvim tmux zsh tree-sitter bazel ibazel bat go gopls \
+          for tool in claude nvim tmux zsh tree-sitter bazel ibazel buildifier bat go gopls \
             rustup rust-analyzer cargo fzf difft rg fd clang-format tldr starpls \
             lua-language-server bash-language-server shfmt zig zls \
             elan lean lake; do
