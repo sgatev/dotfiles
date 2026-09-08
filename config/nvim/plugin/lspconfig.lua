@@ -2,6 +2,7 @@ vim.pack.add({
   'https://github.com/neovim/nvim-lspconfig',
 })
 
+local conform = require('conform')
 local fzf_lua = require('fzf-lua')
 
 vim.lsp.enable('bashls')
@@ -14,7 +15,7 @@ vim.lsp.enable('zls')
 
 -- Formats a buffer.
 local function format()
-  return vim.lsp.buf.format({
+  return conform.format({
     timeout_ms = 10000,
   })
 end
