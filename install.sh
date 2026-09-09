@@ -33,6 +33,7 @@ brew_install zsh
 brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
 ln -f -s $DOTFILES/zshrc ~/.zshrc
+ln -f -s $DOTFILES/zshenv ~/.zshenv
 mkdir -p ~/.zsh && ln -f -h -s $DOTFILES/zsh ~/.zsh/init
 
 # https://github.com/Aloxaf/fzf-tab
