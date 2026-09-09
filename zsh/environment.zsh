@@ -1,5 +1,3 @@
-export EDITOR="nvim"
-export MANPAGER="nvim +Man!"
 export PROMPT=$'%F{blue}%~\n%(?.%F{green}❯.%F{red}❯)%f '
 export WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 
