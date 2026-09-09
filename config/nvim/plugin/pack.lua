@@ -23,3 +23,22 @@ vim.api.nvim_create_user_command('PackClean', function()
 
   vim.pack.del(vim.tbl_map(function(plugin) return plugin.spec.name end, obsolete))
 end, { desc = 'Remove plugins no longer in the configuration' })
+
+--- Completes with the names of the installed plugins.
+--- @param lead string
+--- @return string[]
+local function complete_plugin_names(lead)
+  local names = vim.tbl_map(function(plugin) return plugin.spec.name end, vim.pack.get())
+  return vim.tbl_filter(function(name) return vim.startswith(name, lead) end, names)
+end
+
+-- Updates plugins, showing the changelog in a confirmation buffer which is
+-- accepted with `:write` and rejected with `:quit`. Updates every plugin when
+-- given no arguments.
+vim.api.nvim_create_user_command('PackUpdate', function(opts)
+  vim.pack.update(#opts.fargs > 0 and opts.fargs or nil)
+end, {
+  nargs = '*',
+  complete = complete_plugin_names,
+  desc = 'Update plugins',
+})
