@@ -36,13 +36,11 @@ git_install https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 brew_install zsh
 brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
-ln -f -s $DOTFILES/zshrc ~/.zshrc
 ln -f -s $DOTFILES/zshenv ~/.zshenv
-ln -f -s $DOTFILES/zprofile ~/.zprofile
-mkdir -p ~/.zsh && ln -f -h -s $DOTFILES/zsh ~/.zsh/init
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/zsh ~/.config/
 
 # https://github.com/Aloxaf/fzf-tab
-git_install https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
+git_install https://github.com/Aloxaf/fzf-tab ~/.config/zsh/plugins/fzf-tab
 
 # https://www.nerdfonts.com
 brew_install font-fira-code-nerd-font
