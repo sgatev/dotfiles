@@ -18,10 +18,12 @@ jobs:
             exit 1
           fi
       - name: Verify installed tools
+        # Run under a non-interactive zsh, which reads ~/.zshenv but not
+        # ~/.zshrc, so this also covers the PATH that scripts and subprocesses
+        # get rather than only the one an interactive session sees.
+        shell: zsh -e {0}
         run: |
-          # Homebrew keeps rustup keg-only, so cargo is not linked into its prefix.
-          export PATH="$(brew --prefix rustup)/bin:$PATH"
-          status=0
+          failed=0
           for tool in claude nvim tmux zsh tree-sitter bazel ibazel buildifier bat go gopls \
             rustup rust-analyzer cargo fzf difft rg fd clang-format tldr starpls \
             lua-language-server bash-language-server shfmt zig zls \
@@ -30,7 +32,7 @@ jobs:
               echo "  $tool"
             else
               echo "::error::$tool is not installed"
-              status=1
+              failed=1
             fi
           done
-          exit $status
+          exit $failed

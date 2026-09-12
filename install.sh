@@ -5,7 +5,11 @@ set -e
 DOTFILES="$(cd $(dirname $0) && pwd)"
 
 # https://brew.sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# The installer above only prints this; it does not touch the PATH of the shell
+# running it, and /opt/homebrew/bin is not on the system default PATH.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 function brew_install {
   brew install --quiet $1
@@ -34,6 +38,7 @@ brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
 ln -f -s $DOTFILES/zshrc ~/.zshrc
 ln -f -s $DOTFILES/zshenv ~/.zshenv
+ln -f -s $DOTFILES/zprofile ~/.zprofile
 mkdir -p ~/.zsh && ln -f -h -s $DOTFILES/zsh ~/.zsh/init
 
 # https://github.com/Aloxaf/fzf-tab
