@@ -28,8 +28,6 @@ git_install https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/
 brew_install tmux
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/tmux ~/.config/
 git_install https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-
-# Install tmux plugins.
 /bin/bash ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
 
 # https://zsh.org
@@ -38,38 +36,38 @@ brew_install zsh-autosuggestions
 brew_install zsh-syntax-highlighting
 ln -f -s $DOTFILES/zshenv ~/.zshenv
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/zsh ~/.config/
-
-# https://github.com/Aloxaf/fzf-tab
 git_install https://github.com/Aloxaf/fzf-tab ~/.config/zsh/plugins/fzf-tab
 
 # https://www.nerdfonts.com
 brew_install font-fira-code-nerd-font
 
+# https://neovim.io
+brew_install neovim
+brew_install tree-sitter-cli
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/nvim ~/.config/
+nvim --headless -c 'qa!'
+
+# https://github.com/junegunn/fzf
+brew_install fzf
+$(brew --prefix)/opt/fzf/install --all --no-bash --no-fish >/dev/null
+
 # https://claude.com/product/claude-code
 brew_install claude-code
 
-# https://neovim.io
-brew_install neovim
-brew_install tree-sitter-cli # Required by nvim-treesitter to compile parsers.
-mkdir -p ~/.config && ln -f -s $DOTFILES/config/nvim ~/.config/
-nvim --headless -c 'qa!' # Install plugins and treesitter parsers.
+# https://github.com/sharkdp/bat
+brew_install bat
 
 # https://bazel.build
 brew_install bazelisk
 brew tap bazelbuild/tap
 brew trust --formula bazelbuild/tap/ibazel
 brew_install bazelbuild/tap/ibazel
-
-# https://github.com/bazelbuild/buildtools
 brew_install buildifier
 
 # https://github.com/withered-magic/starpls
 brew tap withered-magic/brew
 brew trust --formula withered-magic/brew/starpls
 brew_install withered-magic/brew/starpls
-
-# https://github.com/sharkdp/bat
-brew_install bat
 
 # http://golang.org
 brew_install go
@@ -87,10 +85,6 @@ brew_install rust-analyzer
 # https://ziglang.org
 brew_install zig
 brew_install zls
-
-# https://github.com/junegunn/fzf
-brew_install fzf
-$(brew --prefix)/opt/fzf/install --all --no-bash --no-fish >/dev/null
 
 # https://git-scm.com
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/git ~/.config/

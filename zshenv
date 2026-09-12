@@ -1,4 +1,4 @@
-# zsh reads this before ZDOTDIR exists, so it is the one file which has to live
+# Zsh reads this before ZDOTDIR exists, so it is the one file which has to live
 # in the home directory. Everything else is kept with the other configuration.
 export ZDOTDIR="$HOME/.config/zsh"
 
