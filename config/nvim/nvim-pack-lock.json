@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "async.nvim": {
+      "rev": "ca8f5696c45bd4786b8840923d86b6932ce92ded",
+      "src": "https://github.com/lewis6991/async.nvim"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
@@ -12,10 +16,6 @@
     "fzf-lua": {
       "rev": "05e44d38de0a79c11fba5f7bf8138791b1dbdd1e",
       "src": "https://github.com/ibhagwan/fzf-lua"
-    },
-    "gitsigns.nvim": {
-      "rev": "f2421c550618d257048afa650413d9e542ddbe67",
-      "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "hop.nvim": {
       "rev": "6e83486f351066e38c3ae9daad2a4f01dfb262ad",
@@ -72,6 +72,14 @@
     "trouble.nvim": {
       "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
       "src": "https://github.com/folke/trouble.nvim"
+    },
+    "vclib.nvim": {
+      "rev": "c83945c63dc0c5c8687ba0eff5a40af1f8bf6002",
+      "src": "https://github.com/algmyr/vclib.nvim"
+    },
+    "vcsigns.nvim": {
+      "rev": "0cf41ddd4bc47a13a4ac27eb7f15e311240bde8e",
+      "src": "https://github.com/algmyr/vcsigns.nvim"
     },
     "vim-illuminate": {
       "rev": "1cc33d347c574c3bd21a4852fc9ffed677c1c58c",
