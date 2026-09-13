@@ -64,11 +64,6 @@ brew trust --formula bazelbuild/tap/ibazel
 brew_install bazelbuild/tap/ibazel
 brew_install buildifier
 
-# https://github.com/withered-magic/starpls
-brew tap withered-magic/brew
-brew trust --formula withered-magic/brew/starpls
-brew_install withered-magic/brew/starpls
-
 # http://golang.org
 brew_install go
 brew_install gopls

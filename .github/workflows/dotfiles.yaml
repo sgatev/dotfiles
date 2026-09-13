@@ -24,9 +24,9 @@ jobs:
         shell: zsh -e {0}
         run: |
           failed=0
-          for tool in claude nvim tmux zsh tree-sitter bazel ibazel buildifier bat go gopls \
-            rustup rust-analyzer cargo fzf difft rg fd clang-format tldr starpls \
-            lua-language-server bash-language-server shfmt zig zls \
+          for tool in claude nvim tmux zsh tree-sitter bazel ibazel buildifier \
+            bat go gopls rustup rust-analyzer cargo fzf difft rg fd clang-format \
+            tldr lua-language-server bash-language-server shfmt zig zls \
             elan lean lake; do
             if command -v "$tool" >/dev/null; then
               echo "  $tool"
