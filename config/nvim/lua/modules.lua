@@ -2,9 +2,11 @@
 -- modules by name for the whole session, so the first require wins and code
 -- expecting the other is left with a module it cannot use.
 --
--- The way out is to copy one of them under a name nothing else claims, then
--- rewrite the plugins needing that copy to require it by the new name. The
--- edits are made on disk, so reinstalling or updating a plugin undoes them.
+-- The way out is to rename one of them to something nothing else claims, then
+-- rewrite the plugins needing it to require the new name. Renaming rather than
+-- copying leaves one file answering to the original name, so which plugin gets
+-- it stops depending on the order the two happen to be required in. The edits
+-- are made on disk, so reinstalling or updating a plugin undoes them.
 --
 -- Only the top level name is renamed, which is enough unless the two plugins
 -- also ship a directory of that name.
@@ -54,21 +56,27 @@ end
 --- @field module string The name both plugins claim.
 --- @field alias string The name to give the copy.
 --- @field provider string Plugin whose copy of the module is renamed.
---- @field consumers string[] Plugins whose requires are repointed at the copy.
+--- @field consumers string[] Further plugins whose requires are repointed at the
+--- renamed module. The provider is always repointed and need not be listed.
 
---- Resolves one collision. Cheap to call repeatedly: the copy is made only when
---- absent, and a tree is only globbed once a file it changed last time shows the
---- rewrite to have been undone.
+--- Resolves one collision. Cheap to call repeatedly: the rename only happens
+--- when the original name has reappeared, and a tree is only globbed once a file
+--- it changed last time shows the rewrite to have been undone.
 --- @param spec modules.Rename
 function M.rename(spec)
   local source = ('%s/%s/lua/%s.lua'):format(packages, spec.provider, spec.module)
-  local copy = ('%s/%s/lua/%s.lua'):format(packages, spec.provider, spec.alias)
-  if vim.uv.fs_stat(source) and not vim.uv.fs_stat(copy) then
-    vim.uv.fs_copyfile(source, copy)
+  local renamed = ('%s/%s/lua/%s.lua'):format(packages, spec.provider, spec.alias)
+  if vim.uv.fs_stat(source) then
+    vim.uv.fs_rename(source, renamed)
   end
 
-  for _, consumer in ipairs(spec.consumers) do
-    local marker = ('%s/%s.%s'):format(markers, consumer, spec.alias)
+  -- The providing plugin can require the module itself, and would otherwise be
+  -- handed whichever copy won the name, so its own tree is rewritten alongside
+  -- those of the consumers. The rename happens first, so it is rewritten too.
+  local plugins = vim.list_extend({ spec.provider }, spec.consumers)
+
+  for _, plugin in ipairs(plugins) do
+    local marker = ('%s/%s.%s'):format(markers, plugin, spec.alias)
     -- A marker names the files rewritten last time. Reading back the first of
     -- them is enough to notice a checkout having restored the originals, which
     -- an untracked marker of its own would not survive to report.
@@ -78,7 +86,7 @@ function M.rename(spec)
 
     if not intact then
       local changed = repoint(
-        ('%s/%s'):format(packages, consumer),
+        ('%s/%s'):format(packages, plugin),
         spec.module,
         spec.alias)
       if #changed > 0 then
