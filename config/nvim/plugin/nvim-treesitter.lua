@@ -14,6 +14,7 @@ local install = nvim_treesitter.install({
   'gomod',
   'gosum',
   'lua',
+  'lucid',
   'markdown',
   'markdown_inline',
   'rust',
