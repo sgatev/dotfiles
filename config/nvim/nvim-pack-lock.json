@@ -14,7 +14,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "fzf-lua": {
-      "rev": "78b85d2a522b1e6a2d154216b3e532a1df1ad6d7",
+      "rev": "eab53acb3fd36479f084f854b4418d02b5c70382",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "hop.nvim": {
@@ -22,7 +22,7 @@
       "src": "https://github.com/smoka7/hop.nvim"
     },
     "lean.nvim": {
-      "rev": "fdbd4dfc3782644f6fff77c654f599ab61201cab",
+      "rev": "c15b1cea82ccb6c0bc1ee16ec12632fc04219087",
       "src": "https://github.com/Julian/lean.nvim"
     },
     "limelight.vim": {
@@ -46,11 +46,11 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "a9bb4d5f4276aa5cddc015faa3ecc5a7b5a26b14",
+      "rev": "3e8d598d3b5f8338a41699c436e5fa11d2666cf0",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-lucid": {
-      "rev": "beed4642c563ea0abefa0a9c34ff309a59a157dd",
+      "rev": "2d531174220598b0c8f5b292c2403ff8c4e42df3",
       "src": "https://github.com/sgatev/nvim-lucid"
     },
     "nvim-tmux-navigation": {
@@ -58,7 +58,7 @@
       "src": "https://github.com/alexghergh/nvim-tmux-navigation"
     },
     "nvim-treesitter": {
-      "rev": "25a9b06a09ea4e10712bec37e7b7d9f423262b91",
+      "rev": "910fdf6f49e9dee7e7257c7d11a76b040fdfb9de",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-ufo": {
