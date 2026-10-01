@@ -22,7 +22,7 @@
       "src": "https://github.com/smoka7/hop.nvim"
     },
     "lean.nvim": {
-      "rev": "c15b1cea82ccb6c0bc1ee16ec12632fc04219087",
+      "rev": "527b47e8a2f61968e6af55ad4c5550e70e5b9555",
       "src": "https://github.com/Julian/lean.nvim"
     },
     "limelight.vim": {
