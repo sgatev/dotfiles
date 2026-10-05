@@ -3,6 +3,13 @@
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 
+# Here rather than with the rest of the fzf setup so that fzf run from tmux
+# popups, which are non-interactive shells, still picks up the theme.
+FZF_DEFAULT_UI="--prompt='❯ ' --pointer='▶'"
+FZF_DEFAULT_COLOR='bg+:#2E3440,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
+FZF_DEFAULT_PREVIEW="bat --theme=Nord --style=numbers --color=always --line-range :500 {}"
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_UI --color='$FZF_DEFAULT_COLOR' --preview='$FZF_DEFAULT_PREVIEW'"
+
 export HOMEBREW_PREFIX="/opt/homebrew"
 
 # Homebrew is not on the system default PATH, so without this nothing installed

@@ -24,6 +24,9 @@ brew_install ghostty
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/ghostty ~/.config/
 git_install https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
 
+# bash ≥ 4.2 needed for https://github.com/gs/tmux-agent-status
+brew_install bash
+
 # http://tmux.github.io
 brew_install tmux
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/tmux ~/.config/
