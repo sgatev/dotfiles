@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 #
-# Switches Ghostty, tmux, zsh, Neovim and Claude Code between dark (Nord) and
-# light (Rose Pine Dawn) themes.
+# Switches Ghostty, tmux, zsh and Neovim between dark (Nord) and light (Rose Pine
+# Dawn) themes.
+#
+# Claude Code is left alone: its dark-ansi theme takes its colors from the
+# terminal palette, so it already follows the switch, while light-ansi prints
+# code in palette black, which both themes make nearly the background color.
 #
 # Usage: theme [dark|light|toggle] (prints the current theme without one)
 #
@@ -53,16 +57,6 @@ else
   write fzf '--color=dark,bg+:#2E3440,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
 fi
 write theme "$theme"
-
-# Claude Code draws its own selection, in the colors of its own theme. Only the
-# dark/light part of that is switched, keeping a variant such as dark-ansi.
-claude_settings=~/.claude/settings.json
-if [ -f "$claude_settings" ]; then
-  jq --arg theme "$theme" '.theme = ((.theme // $theme) | sub("^(dark|light)"; $theme))' \
-    "$claude_settings" >"$claude_settings.tmp" &&
-    mv "$claude_settings.tmp" "$claude_settings" ||
-    rm -f "$claude_settings.tmp"
-fi
 
 if tmux info &>/dev/null; then
   tmux source-file ~/.config/tmux/theme-$theme.conf
