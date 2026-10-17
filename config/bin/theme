@@ -39,7 +39,12 @@ mkdir -p "$state"
 # fzf's colors start from its 'light' or 'dark' base scheme, which covers the
 # ones not listed, such as the scrollbar and separators.
 if [ "$theme" = light ]; then
-  write ghostty 'theme = Rose Pine Dawn'
+  # Rose Pine has no green, and puts its blue "pine" in the green slots, so
+  # additions in diffs and other success output look blue. Replaced with a
+  # muted green which keeps 4.5:1 contrast against the background.
+  write ghostty 'theme = Rose Pine Dawn
+palette = 2=#4a7c59
+palette = 10=#4a7c59'
   write bat '--theme=rose-pine-dawn'
   write fzf '--color=light,fg:#797593,bg:#faf4ed,hl:#d7827e,fg+:#575279,bg+:#f2e9e1,hl+:#d7827e,border:#dfdad9,header:#286983,gutter:#faf4ed,spinner:#ea9d34,info:#56949f,pointer:#907aa9,marker:#b4637a,prompt:#797593'
 else
