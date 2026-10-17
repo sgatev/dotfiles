@@ -7,3 +7,4 @@ font-size = 12
 shell-integration = zsh
 theme = Nord
 window-decoration = none
+config-file = ?~/.local/state/dotfiles/ghostty

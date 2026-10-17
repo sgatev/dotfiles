@@ -19,6 +19,11 @@ function git_install {
   git -C $2 pull --quiet || git clone --quiet $1 $2
 }
 
+# Scripts such as `theme`, which switches between the dark and light Nord theme.
+mkdir -p ~/.config && ln -f -s $DOTFILES/config/bin ~/.config/
+# Writes the files which the configs below read, keeping a theme already picked.
+[ -e ~/.local/state/dotfiles/theme ] || $DOTFILES/config/bin/theme dark
+
 # https://ghostty.org
 brew_install ghostty
 mkdir -p ~/.config && ln -f -s $DOTFILES/config/ghostty ~/.config/
@@ -59,6 +64,9 @@ brew_install claude-code
 
 # https://github.com/sharkdp/bat
 brew_install bat
+# Rose Pine Dawn, the light theme picked by ~/.config/bin/theme.
+git_install https://github.com/rose-pine/tm-theme ~/.config/bat/themes/rose-pine
+bat cache --build >/dev/null
 
 # https://bazel.build
 brew_install bazelisk

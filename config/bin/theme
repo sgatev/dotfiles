@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+#
+# Switches Ghostty, tmux, zsh, Neovim and Claude Code between dark (Nord) and
+# light (Rose Pine Dawn) themes.
+#
+# Usage: theme [dark|light|toggle] (prints the current theme without one)
+#
+# The choice is kept in state files which each program reads on startup, and
+# which fzf and bat read every time they run. Running programs are updated too:
+# Ghostty is told to reload its config, tmux sources the matching theme file and
+# Neovim watches the file.
+
+set -euo pipefail
+
+state=~/.local/state/dotfiles
+current=$(cat "$state/theme" 2>/dev/null || echo dark)
+
+case "${1:-}" in
+'')
+  echo "$current"
+  exit
+  ;;
+dark | light) theme=$1 ;;
+toggle) [ "$current" = light ] && theme=dark || theme=light ;;
+*)
+  echo 'usage: theme [dark|light|toggle]' >&2
+  exit 1
+  ;;
+esac
+
+# Written to a temporary file and moved into place, so that a watcher never
+# sees a half-written file.
+function write {
+  printf '%s\n' "$2" >"$state/$1.tmp"
+  mv "$state/$1.tmp" "$state/$1"
+}
+
+mkdir -p "$state"
+# fzf's colors start from its 'light' or 'dark' base scheme, which covers the
+# ones not listed, such as the scrollbar and separators.
+if [ "$theme" = light ]; then
+  write ghostty 'theme = Rose Pine Dawn'
+  write bat '--theme=rose-pine-dawn'
+  write fzf '--color=light,fg:#797593,bg:#faf4ed,hl:#d7827e,fg+:#575279,bg+:#f2e9e1,hl+:#d7827e,border:#dfdad9,header:#286983,gutter:#faf4ed,spinner:#ea9d34,info:#56949f,pointer:#907aa9,marker:#b4637a,prompt:#797593'
+else
+  write ghostty 'theme = Nord'
+  write bat '--theme=Nord'
+  write fzf '--color=dark,bg+:#2E3440,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
+fi
+write theme "$theme"
+
+# Claude Code draws its own selection, in the colors of its own theme. Only the
+# dark/light part of that is switched, keeping a variant such as dark-ansi.
+claude_settings=~/.claude/settings.json
+if [ -f "$claude_settings" ]; then
+  jq --arg theme "$theme" '.theme = ((.theme // $theme) | sub("^(dark|light)"; $theme))' \
+    "$claude_settings" >"$claude_settings.tmp" &&
+    mv "$claude_settings.tmp" "$claude_settings" ||
+    rm -f "$claude_settings.tmp"
+fi
+
+if tmux info &>/dev/null; then
+  tmux source-file ~/.config/tmux/theme-$theme.conf
+fi
+
+# Ghostty applies a config reload to every window, so any one terminal will do.
+# Checked before calling osascript, which resolves Ghostty's scripting terms when
+# it compiles the script, and so fails where Ghostty is not installed, as on CI.
+# The theme is already written by now, so a failed reload is only reported.
+if pgrep -xq ghostty; then
+  osascript -e 'tell application "Ghostty" to perform action "reload_config" on terminal 1' >/dev/null ||
+    echo 'theme: could not reload the Ghostty config' >&2
+fi

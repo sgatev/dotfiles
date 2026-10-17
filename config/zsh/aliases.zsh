@@ -1,4 +1,4 @@
-alias b="bat --theme=Nord"
+alias b=bat
 alias bb="bazel build"
 alias br="bazel run"
 alias bt="bazel test"

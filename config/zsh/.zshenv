@@ -6,9 +6,15 @@ export MANPAGER="nvim +Man!"
 # Here rather than with the rest of the fzf setup so that fzf run from tmux
 # popups, which are non-interactive shells, still picks up the theme.
 FZF_DEFAULT_UI="--prompt='❯ ' --pointer='▶'"
-FZF_DEFAULT_COLOR='bg+:#2E3440,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
-FZF_DEFAULT_PREVIEW="bat --theme=Nord --style=numbers --color=always --line-range :500 {}"
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_UI --color='$FZF_DEFAULT_COLOR' --preview='$FZF_DEFAULT_PREVIEW'"
+FZF_DEFAULT_PREVIEW="bat --style=numbers --color=always --line-range :500 {}"
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_UI --preview='$FZF_DEFAULT_PREVIEW'"
+
+# The colors of fzf and bat are kept in files written by ~/.config/bin/theme.
+# Both read them each time they start, so a switch also applies to shells and
+# Neovim instances which are already running. fzf fails to start when the file
+# is missing, as it is until the script has run once.
+[ -r ~/.local/state/dotfiles/fzf ] && export FZF_DEFAULT_OPTS_FILE=~/.local/state/dotfiles/fzf
+export BAT_CONFIG_PATH=~/.local/state/dotfiles/bat
 
 export HOMEBREW_PREFIX="/opt/homebrew"
 
@@ -26,6 +32,7 @@ prepend_path() {
     $HOMEBREW_PREFIX/bin
     $HOMEBREW_PREFIX/sbin
     $HOMEBREW_PREFIX/opt/rustup/bin # Keg-only, so cargo and rustc live here.
+    $HOME/.config/bin # Scripts from the dotfiles, such as `theme`.
     $path
   )
   export PATH
