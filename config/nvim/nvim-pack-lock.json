@@ -1,7 +1,7 @@
 {
   "plugins": {
     "async.nvim": {
-      "rev": "4182ab361c09ff251ac159c4a4110ec8e7723215",
+      "rev": "028d843a892b4920d8306216369aeee9fbcebae5",
       "src": "https://github.com/lewis6991/async.nvim"
     },
     "blink.cmp": {
@@ -14,7 +14,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "fzf-lua": {
-      "rev": "5b88d6f0af7fcb41d4a8bb340bf70d7e3824ee9d",
+      "rev": "22f0bbd3140a8a3b34fec75e5a640513ca6d4ce3",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "hop.nvim": {
@@ -22,7 +22,7 @@
       "src": "https://github.com/smoka7/hop.nvim"
     },
     "lean.nvim": {
-      "rev": "dc27730b63801652c6af251ac5e2c61cf5584890",
+      "rev": "108592ebb16d57cbf84d994183327fe643dfa730",
       "src": "https://github.com/Julian/lean.nvim"
     },
     "limelight.vim": {
@@ -30,7 +30,7 @@
       "src": "https://github.com/junegunn/limelight.vim"
     },
     "mini.move": {
-      "rev": "57435a0f6654c232405424a78424bb3edbedfa7c",
+      "rev": "5207c4de3d7db84aadedf72e4a27048d9e46ccf9",
       "src": "https://github.com/echasnovski/mini.move"
     },
     "noice.nvim": {
@@ -46,7 +46,7 @@
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "77b7432d4770d23b277d37923e5a08a442d8bb07",
+      "rev": "993d048db0d83d8e8ba3f9cb376456321acdcce3",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-lucid": {
@@ -58,7 +58,7 @@
       "src": "https://github.com/alexghergh/nvim-tmux-navigation"
     },
     "nvim-treesitter": {
-      "rev": "a2f694478be07f89c2d03cc17858a8745a400c4b",
+      "rev": "19bdfc04f40ed2ccb3340591d125f759b0406875",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-ufo": {
@@ -86,7 +86,7 @@
       "src": "https://github.com/algmyr/vclib.nvim"
     },
     "vcsigns.nvim": {
-      "rev": "7d7e9934f94a8e270089ac2621fcfbb78780de69",
+      "rev": "945608a08f1a83a2dc5cdd6d874de48a1d609c73",
       "src": "https://github.com/algmyr/vcsigns.nvim"
     },
     "vim-illuminate": {
